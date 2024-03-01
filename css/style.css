@@ -86,10 +86,15 @@ address {
   background-image: url(../img/pattern.png);
 }
 
-.wrapper {
-  min-height: 100%;
+.presentation__screen {
   width: 100%;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #071926;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,6 +102,61 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.presentation__screen::before {
+  content: "";
+  background-image: url(../img/hero-bg.png);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 170px;
+  z-index: -3;
+}
+.presentation__screen-title {
+  font-weight: 800;
+  font-size: 150px;
+  line-height: 142%;
+  color: #fff;
+  text-align: center;
+}
+.presentation__screen-text {
+  font-weight: 400;
+  font-size: 26px;
+  color: #fff;
+  text-align: center;
+}
+.presentation__screen-img {
+  z-index: -1;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #071926;
+  background-image: url(../img/pattern.png);
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .main {
@@ -106,13 +166,13 @@ address {
 }
 
 .container {
-  max-width: 1410px;
+  max-width: 1470px;
   margin: 0 auto;
   padding: 0 15px;
   height: 100%;
 }
 
-/*========================================================================*/
+/*==============================HEADER====================================*/
 /*========================================================*/
 /*======================Адаптив===========================*/
 /*========================================================*/
