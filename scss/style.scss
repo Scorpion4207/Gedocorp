@@ -1,0 +1,41 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "mixins";
+
+/*======================Глобальные настройки===========================*/
+
+.body {
+  font-family: var(--font-family);
+  line-height: 1.32;
+  background-color: #071926;
+  background-image: url(../img/pattern.png);
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+/*========================================================================*/
+
+/*========================================================*/
+/*======================Адаптив===========================*/
+/*========================================================*/
+
+@import "media";
