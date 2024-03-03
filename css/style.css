@@ -297,6 +297,10 @@ address {
 /*==============================HEADER====================================*/
 .header {
   background-color: var(--bg);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 6;
 }
 .header__inner {
   padding: 20px 0 16px;
@@ -311,6 +315,7 @@ address {
 .header__item:last-child {
   justify-self: end;
 }
+
 .button {
   font-family: var(--second-family);
   font-weight: 500;
@@ -466,6 +471,12 @@ address {
           animation: none;
 }
 
+/*=========================FOOTER===========================*/
+.footer {
+  background: linear-gradient(141deg, rgba(57, 185, 236, 0.4862745098) 0%, rgba(0, 102, 51, 0.4901960784) 100%);
+  border-radius: 72px;
+  margin: 50px;
+}
 /*========================================================*/
 /*======================Адаптив===========================*/
 /*========================================================*/

@@ -167,26 +167,22 @@
 
 .header {
   background-color: var(--bg);
-
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 6;
   &__inner {
     padding: 20px 0 16px;
+    
   }
-
-  &__nav {}
-
   &__list {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
   }
-
-  &__item {}
-
   &__item:last-child {
     justify-self: end
   }
-
-  &__link {}
 }
 
 .button {
@@ -313,6 +309,53 @@
   -webkit-mask-composite: xor;
   animation: none;
 }
+
+
+
+/*=========================FOOTER===========================*/
+.footer {
+  background: linear-gradient(141deg, #39b9ec7c 0%, #0066337d 100% ) ;
+  border-radius: 72px;
+  margin: 50px;
+  &__inner {
+  }
+
+  &__logo {
+  }
+
+  // .footer__list-info
+
+  &__list-info {
+  }
+
+  // .footer__item-info
+
+  &__item-info {
+  }
+
+  // .footer__link-info
+
+  &__link-info {
+  }
+
+  // .footer__list-сontacts
+
+  &__list-сontacts {
+  }
+
+  // .footer__item-сontacts
+
+  &__item-сontacts {
+  }
+
+  // .footer__link-сontacts
+
+  &__link-сontacts {
+  }
+}
+.container {
+}
+
 
 /*========================================================*/
 /*======================Адаптив===========================*/
