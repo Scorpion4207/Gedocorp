@@ -92,6 +92,7 @@ address {
   background-image: url(../img/pattern.png);
 }
 
+/*======================Presentation Screen===========================*/
 .presentation__screen {
   width: 100%;
   overflow: hidden;
@@ -141,6 +142,8 @@ address {
   font-size: 26px;
   color: #fff;
   text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .presentation__screen-img {
@@ -241,6 +244,7 @@ address {
     z-index: -1;
   }
 }
+/*======================Глобальные настройки===========================*/
 [data-aos=custom] {
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
