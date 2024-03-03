@@ -525,6 +525,60 @@ address {
   width: 100%;
 }
 
+#animation__hero-text {
+  display: none;
+  -webkit-animation: hero 2s forwards;
+          animation: hero 2s forwards;
+}
+
+@-webkit-keyframes hero {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes hero {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+#animation__hero-team {
+  display: none;
+  -webkit-animation: team 2.5s forwards;
+          animation: team 2.5s forwards;
+}
+
+@-webkit-keyframes team {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes team {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
 /*=========================FOOTER===========================*/
 .footer {
   background: linear-gradient(141deg, rgba(57, 185, 236, 0.4862745098) 0%, rgba(0, 102, 51, 0.4901960784) 100%);

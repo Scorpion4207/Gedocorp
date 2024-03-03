@@ -360,7 +360,10 @@
     color: #fff;
     overflow: hidden;
     margin-bottom: 35px;
+    
   }
+
+
 
   // .hero__team
 
@@ -399,7 +402,35 @@
   }
 }
 
-.container {}
+#animation__hero-text {
+  display: none;
+  animation: hero 2s forwards;
+}
+
+@keyframes hero {
+  0% {
+    transform: translateY(100%);
+  }
+   100%{
+    transform: translateY(0%);
+  }
+}
+#animation__hero-team {
+  display: none;
+  animation: team 2.5s forwards;
+}
+
+@keyframes team {
+  0% {
+    transform: translateY(100%);
+  }
+   100%{
+    transform: translateY(0%);
+  }
+}
+
+
+
 
 
 /*=========================FOOTER===========================*/
