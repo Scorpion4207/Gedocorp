@@ -171,15 +171,26 @@
   left: 0;
   right: 0;
   z-index: 6;
+
   &__inner {
     padding: 20px 0 16px;
-    
+
   }
+
   &__list {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
   }
+
+  &__item {
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 142%;
+    color: #fff;
+  }
+
   &__item:last-child {
     justify-self: end
   }
@@ -314,47 +325,81 @@
 
 /*=========================FOOTER===========================*/
 .footer {
-  background: linear-gradient(141deg, #39b9ec7c 0%, #0066337d 100% ) ;
+  background: linear-gradient(141deg, #39b9ec7c 0%, #0066337d 100%);
   border-radius: 72px;
-  margin: 50px;
+  margin: 0 70px 30px;
+
   &__inner {
+    display: grid;
+    grid-template-columns: auto 1fr 1.2fr;
+    padding: 50px 0 140px;
+    gap: 140px;
   }
 
-  &__logo {
-  }
+  &__logo {}
 
-  // .footer__list-info
 
   &__list-info {
+    margin-top: 30px;
   }
 
-  // .footer__item-info
-
+  &__item-info:first-child {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
   &__item-info {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  &__item-info:last-child {
+    margin-bottom: none;
   }
 
-  // .footer__link-info
-
-  &__link-info {
-  }
+  &__link-info {}
 
   // .footer__list-сontacts
 
   &__list-сontacts {
+    margin-top: 30px;
   }
 
   // .footer__item-сontacts
 
+  &__item-сontacts:first-child {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
   &__item-сontacts {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  &__item-сontacts:last-child {
+    margin-bottom: none;
   }
 
   // .footer__link-сontacts
 
-  &__link-сontacts {
+  &__link-сontacts {}
+
+  &__link-sochial {
+    display: flex;
+    gap: 20px;
   }
 }
-.container {
-}
+
+.container {}
 
 
 /*========================================================*/
