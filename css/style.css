@@ -477,6 +477,54 @@ address {
           animation: none;
 }
 
+/*=========================HERO===========================*/
+.hero__inner {
+  margin: 200px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.hero__content {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.hero__text {
+  font-family: var(--third-family);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 132%;
+  color: #fff;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+.hero__team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.hero__team-img {
+  padding: 15px 10px;
+  background: var(--blue);
+  border-radius: 14px;
+}
+.hero__team-text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+}
+.hero__img {
+  overflow: hidden;
+  border-radius: 72px;
+}
+.hero__img img {
+  width: 100%;
+}
+
 /*=========================FOOTER===========================*/
 .footer {
   background: linear-gradient(141deg, rgba(57, 185, 236, 0.4862745098) 0%, rgba(0, 102, 51, 0.4901960784) 100%);
