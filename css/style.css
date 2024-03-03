@@ -127,7 +127,7 @@ address {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 220px;
+  padding: 180px;
   z-index: -3;
 }
 .presentation__screen-title {
@@ -155,9 +155,9 @@ address {
   content: "";
   position: absolute;
   top: -20%;
-  right: -5%;
-  height: 1200px;
-  width: 1500px;
+  right: 0%;
+  height: 1000px;
+  width: 1200px;
   background-color: var(--bg);
   border-radius: 50%;
   -webkit-filter: blur(50px);
@@ -167,12 +167,28 @@ address {
           animation: presentation-before 2.5s forwards;
 }
 
+.presentation__screen__psevElem::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 0%;
+  height: 1000px;
+  width: 1200px;
+  background-color: var(--bg);
+  border-radius: 50%;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  z-index: -1;
+  -webkit-animation: presentation-after 2.5s forwards;
+          animation: presentation-after 2.5s forwards;
+}
+
 @-webkit-keyframes presentation-before {
   100% {
-    top: -25%;
-    right: -8%;
-    height: 1300px;
-    width: 900px;
+    top: -30%;
+    right: -15%;
+    height: 1000px;
+    width: 850px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(-65deg);
@@ -185,10 +201,10 @@ address {
 
 @keyframes presentation-before {
   100% {
-    top: -25%;
-    right: -8%;
-    height: 1300px;
-    width: 900px;
+    top: -30%;
+    right: -15%;
+    height: 1000px;
+    width: 850px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(-65deg);
@@ -198,28 +214,12 @@ address {
     z-index: -1;
   }
 }
-.presentation__screen__psevElem::after {
-  content: "";
-  position: absolute;
-  top: -20%;
-  left: -5%;
-  height: 1200px;
-  width: 1500px;
-  background-color: var(--bg);
-  border-radius: 50%;
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
-  z-index: -1;
-  -webkit-animation: presentation-after 2.5s forwards;
-          animation: presentation-after 2.5s forwards;
-}
-
 @-webkit-keyframes presentation-after {
   100% {
-    top: -25%;
-    left: -8%;
-    height: 1300px;
-    width: 900px;
+    top: -30%;
+    left: -15%;
+    height: 1000px;
+    width: 850px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(65deg);
@@ -229,13 +229,12 @@ address {
     z-index: -1;
   }
 }
-
 @keyframes presentation-after {
   100% {
-    top: -25%;
-    left: -8%;
-    height: 1300px;
-    width: 900px;
+    top: -30%;
+    left: -15%;
+    height: 1000px;
+    width: 850px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(65deg);
