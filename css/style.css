@@ -486,7 +486,7 @@ address {
 .footer__inner {
   display: grid;
   grid-template-columns: auto 1fr 1.2fr;
-  padding: 50px 0 140px;
+  padding: 50px 50px 140px;
   gap: 140px;
 }
 .footer__list-info {
