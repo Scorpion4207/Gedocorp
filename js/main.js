@@ -10,7 +10,7 @@ document.addEventListener('scroll', () => {
     website.style.transform = 'none';  
     setTimeout(function() {
         presentationScreen.style.display = 'none'
-    }, 200);
+    }, 400);
     animationHero.style.display = 'block';  
     animationHeroTeam.style.display = 'block';  
 });
