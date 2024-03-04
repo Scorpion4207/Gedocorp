@@ -1097,6 +1097,7 @@ address {
             transform: translateX(100%);
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    border-radius: 0 0 40px 40px;
   }
   .header__list-mobile {
     margin-top: 30px;
