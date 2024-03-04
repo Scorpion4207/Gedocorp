@@ -191,8 +191,17 @@
     color: #fff;
   }
 
-  &__item:last-child {
-    justify-self: end
+  &__item:nth-child(2) {
+    display: none;
+  }
+
+  &__item:nth-child(4) {
+    justify-self: end;
+  }
+
+  &__item:nth-child(5) {
+    justify-self: end;
+    display: none;
   }
 }
 
@@ -319,8 +328,76 @@
   animation: none;
 }
 
+.chat {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  background:  linear-gradient(139deg, #39b9ec 0%, #063 100%);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
 
 
+.burger {
+  &__icon {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+  }
+
+  &__icon span,
+  &__icon span::before,
+  &__icon span::after {
+    content: '';
+    border-radius: 60px;
+    width: 26px;
+    height: 2px;
+    background-color: var(--bg);
+    transition: all .3s;
+  }
+
+
+   &__icon span {
+  position: relative;
+   }
+
+  &__icon span::before {
+    position: absolute;
+    top: 8px;
+  }
+  &__icon span::after {
+    position: absolute;
+    bottom: 8px;
+  }
+}
+
+.burger__icon:hover  {
+  background: var(--button-hover);
+}
+
+.body--opened-menu .burger__icon span {
+  background: transparent;
+}
+
+.body--opened-menu .burger__icon span::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.body--opened-menu .burger__icon span::after {
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+.header__nav-mobile {
+  display: none;
+}
 /*=========================HERO===========================*/
 
 
@@ -329,12 +406,14 @@
   &__inner {
     margin: 200px 0;
     display: grid;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
   }
 
   &__content {
-  align-self: center;
+    align-self: center;
   }
+
   &__text {
     font-weight: 600;
     font-size: 32px;
@@ -342,7 +421,7 @@
     color: #fff;
     overflow: hidden;
     margin-bottom: 35px;
-    
+
   }
 
   &__team {
@@ -370,7 +449,8 @@
     overflow: hidden;
     border-radius: 72px;
   }
-  &__img img{
+
+  &__img img {
     width: 100%;
   }
 }
@@ -384,10 +464,12 @@
   0% {
     transform: translateY(100%);
   }
-   100%{
+
+  100% {
     transform: translateY(0%);
   }
 }
+
 #animation__hero-team {
   display: none;
   animation: team 2.5s forwards;
@@ -397,7 +479,8 @@
   0% {
     transform: translateY(100%);
   }
-   100%{
+
+  100% {
     transform: translateY(0%);
   }
 }
