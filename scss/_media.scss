@@ -1,0 +1,367 @@
+@media (max-width: 1540px) {
+
+  /*======================Presentation Screen===========================*/
+  .presentation__screen__psevElem::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 1000px;
+    width: 1200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1;
+    animation: presentation-before 2.5s forwards;
+  }
+
+  .presentation__screen__psevElem::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 1000px;
+    width: 1200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1;
+    animation: presentation-after 2.5s forwards;
+  }
+
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: -30%;
+      right: -15%;
+      height: 1000px;
+      width: 850px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(-65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: -30%;
+      left: -15%;
+      height: 1000px;
+      width: 850px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+
+  /*======================Presentation Screen===========================*/
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: -20%;
+      right: -15%;
+      height: 900px;
+      width: 750px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(-65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: -20%;
+      left: -15%;
+      height: 900px;
+      width: 750px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+
+  /*======================Presentation Screen===========================*/
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: 10%;
+      right: -15%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(-65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: 10%;
+      left: -15%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+
+  /*======================Presentation Screen===========================*/
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: 20%;
+      right: -40%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(-65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: 20%;
+      left: -40%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+
+  /*======================Presentation Screen===========================*/
+  .presentation {
+    &__screen::before {
+      padding: 200px;
+    }
+
+    &__screen-title {
+      font-size: 100px;
+    }
+
+    &__screen-text {
+      font-size: 16px;
+      max-width: 350px;
+    }
+  }
+
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: 20%;
+      right: -50%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(-65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: 20%;
+      left: -50%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+
+  /*======================Presentation Screen===========================*/
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: 20%;
+      right: -60%;
+      height: 600px;
+      width: 650px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(25deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: 20%;
+      left: -60%;
+      height: 600px;
+      width: 650px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(65deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  /*======================Presentation Screen===========================*/
+  .presentation {
+    &__screen::before {
+      padding: 220px;
+    }
+
+    &__screen-title {
+      font-size: 80px;
+    }
+
+    &__screen-text {
+      font-size: 16px;
+      max-width: 350px;
+    }
+  }
+
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: 10%;
+      right: -60%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(0deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: 10%;
+      left: -60%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(0);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+
+  /*======================Presentation Screen===========================*/
+
+
+  @keyframes presentation-before {
+    0% {}
+
+    100% {
+      top: 10%;
+      right: -70%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(0deg);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes presentation-after {
+    0% {}
+
+    100% {
+      top: 10%;
+      left: -70%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      transform: rotate(0);
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+
+  /*======================Presentation Screen===========================*/
+
+  .presentation {
+    &__screen::before {
+      padding: 250px;
+    }
+
+    &__screen-title {
+      font-size: 60px;
+    }
+
+    &__screen-text {
+      font-size: 16px;
+      max-width: 250px;
+    }
+  }
+}

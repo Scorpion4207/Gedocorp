@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Golos Text';
+  src: local('Golos Text Medium'), local('GolosText-Medium'),
+      url('../fonts/GolosText-Medium.woff2') format('woff2'),
+      url('../fonts/GolosText-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: local('Golos Text SemiBold'), local('GolosText-SemiBold'),
+      url('../fonts/GolosText-SemiBold.woff2') format('woff2'),
+      url('../fonts/GolosText-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: local('Golos Text Regular'), local('GolosText-Regular'),
+      url('../fonts/GolosText-Regular.woff2') format('woff2'),
+      url('../fonts/GolosText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

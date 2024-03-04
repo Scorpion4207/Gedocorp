@@ -78,11 +78,33 @@ address {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Golos Text";
+  src: local("Golos Text Medium"), local("GolosText-Medium"), url("../fonts/GolosText-Medium.woff2") format("woff2"), url("../fonts/GolosText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: local("Golos Text SemiBold"), local("GolosText-SemiBold"), url("../fonts/GolosText-SemiBold.woff2") format("woff2"), url("../fonts/GolosText-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: local("Golos Text Regular"), local("GolosText-Regular"), url("../fonts/GolosText-Regular.woff2") format("woff2"), url("../fonts/GolosText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --black: #101010;
   --blue: #39b9ec;
   --bg: #071926;
   --button-hover:#dedc00;
+  --font-family: "Golos Text", sans-serif;
 }
 
 /*======================Глобальные настройки===========================*/
@@ -188,7 +210,7 @@ address {
     top: -30%;
     right: -15%;
     height: 1000px;
-    width: 850px;
+    width: 1050px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(-65deg);
@@ -204,7 +226,7 @@ address {
     top: -30%;
     right: -15%;
     height: 1000px;
-    width: 850px;
+    width: 1050px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(-65deg);
@@ -219,7 +241,7 @@ address {
     top: -30%;
     left: -15%;
     height: 1000px;
-    width: 850px;
+    width: 1050px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(65deg);
@@ -234,7 +256,7 @@ address {
     top: -30%;
     left: -15%;
     height: 1000px;
-    width: 850px;
+    width: 1050px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(65deg);
@@ -312,7 +334,6 @@ address {
           align-items: center;
 }
 .header__item {
-  font-family: var(--second-family);
   font-weight: 800;
   font-size: 24px;
   line-height: 142%;
@@ -323,7 +344,6 @@ address {
 }
 
 .button {
-  font-family: var(--second-family);
   font-weight: 500;
   font-size: 24px;
   line-height: 1.4;
@@ -347,7 +367,6 @@ address {
 }
 
 .button__gradient {
-  font-family: var(--second-family);
   font-weight: 500;
   font-size: 24px;
   line-height: 1.4;
@@ -488,7 +507,6 @@ address {
       align-self: center;
 }
 .hero__text {
-  font-family: var(--third-family);
   font-weight: 600;
   font-size: 32px;
   line-height: 132%;
@@ -511,7 +529,6 @@ address {
   border-radius: 14px;
 }
 .hero__team-text {
-  font-family: var(--second-family);
   font-weight: 400;
   font-size: 24px;
   color: rgba(255, 255, 255, 0.6);
@@ -580,64 +597,573 @@ address {
   }
 }
 /*=========================FOOTER===========================*/
-.footer {
-  background: linear-gradient(141deg, rgba(57, 185, 236, 0.4862745098) 0%, rgba(0, 102, 51, 0.4901960784) 100%);
-  border-radius: 72px;
-  margin: 0 70px 30px;
-}
-.footer__inner {
-  display: grid;
-  grid-template-columns: auto 1fr 1.2fr;
-  padding: 50px 50px 140px;
-  gap: 140px;
-}
-.footer__list-info {
-  margin-top: 30px;
-}
-.footer__item-info:first-child {
-  font-family: var(--third-family);
-  font-weight: 600;
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 30px;
-}
-.footer__item-info {
-  font-family: var(--third-family);
-  font-weight: 400;
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 16px;
-}
-.footer__item-info:last-child {
-  margin-bottom: none;
-}
-.footer__list-сontacts {
-  margin-top: 30px;
-}
-.footer__item-сontacts:first-child {
-  font-family: var(--third-family);
-  font-weight: 600;
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 30px;
-}
-.footer__item-сontacts {
-  font-family: var(--third-family);
-  font-weight: 400;
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 16px;
-}
-.footer__item-сontacts:last-child {
-  margin-bottom: none;
-}
-.footer__link-sochial {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-}
-
 /*========================================================*/
 /*======================Адаптив===========================*/
 /*========================================================*/
+@media (max-width: 1540px) {
+  /*======================Presentation Screen===========================*/
+  .presentation__screen__psevElem::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 1000px;
+    width: 1200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    z-index: -1;
+    -webkit-animation: presentation-before 2.5s forwards;
+            animation: presentation-before 2.5s forwards;
+  }
+  .presentation__screen__psevElem::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 1000px;
+    width: 1200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    z-index: -1;
+    -webkit-animation: presentation-after 2.5s forwards;
+            animation: presentation-after 2.5s forwards;
+  }
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: -30%;
+      right: -15%;
+      height: 1000px;
+      width: 850px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: -30%;
+      right: -15%;
+      height: 1000px;
+      width: 850px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: -30%;
+      left: -15%;
+      height: 1000px;
+      width: 850px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: -30%;
+      left: -15%;
+      height: 1000px;
+      width: 850px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 1350px) {
+  /*======================Presentation Screen===========================*/
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: -20%;
+      right: -15%;
+      height: 900px;
+      width: 750px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: -20%;
+      right: -15%;
+      height: 900px;
+      width: 750px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: -20%;
+      left: -15%;
+      height: 900px;
+      width: 750px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: -20%;
+      left: -15%;
+      height: 900px;
+      width: 750px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  /*======================Presentation Screen===========================*/
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: 10%;
+      right: -15%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: 10%;
+      right: -15%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: 10%;
+      left: -15%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: 10%;
+      left: -15%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  /*======================Presentation Screen===========================*/
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: 20%;
+      right: -40%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: 20%;
+      right: -40%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: 20%;
+      left: -40%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: 20%;
+      left: -40%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 800px) {
+  /*======================Presentation Screen===========================*/
+  .presentation__screen::before {
+    padding: 200px;
+  }
+  .presentation__screen-title {
+    font-size: 100px;
+  }
+  .presentation__screen-text {
+    font-size: 16px;
+    max-width: 350px;
+  }
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: 20%;
+      right: -50%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: 20%;
+      right: -50%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-65deg);
+              transform: rotate(-65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: 20%;
+      left: -50%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: 20%;
+      left: -50%;
+      height: 700px;
+      width: 550px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 700px) {
+  /*======================Presentation Screen===========================*/
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: 20%;
+      right: -60%;
+      height: 600px;
+      width: 650px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(25deg);
+              transform: rotate(25deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: 20%;
+      right: -60%;
+      height: 600px;
+      width: 650px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(25deg);
+              transform: rotate(25deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: 20%;
+      left: -60%;
+      height: 600px;
+      width: 650px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: 20%;
+      left: -60%;
+      height: 600px;
+      width: 650px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(65deg);
+              transform: rotate(65deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 600px) {
+  /*======================Presentation Screen===========================*/
+  .presentation__screen::before {
+    padding: 220px;
+  }
+  .presentation__screen-title {
+    font-size: 80px;
+  }
+  .presentation__screen-text {
+    font-size: 16px;
+    max-width: 350px;
+  }
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: 10%;
+      right: -60%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: 10%;
+      right: -60%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: 10%;
+      left: -60%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: 10%;
+      left: -60%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 450px) {
+  /*======================Presentation Screen===========================*/
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: 10%;
+      right: -70%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: 10%;
+      right: -70%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: 10%;
+      left: -70%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: 10%;
+      left: -70%;
+      height: 500px;
+      width: 450px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 400px) {
+  /*======================Presentation Screen===========================*/
+  .presentation__screen::before {
+    padding: 250px;
+  }
+  .presentation__screen-title {
+    font-size: 60px;
+  }
+  .presentation__screen-text {
+    font-size: 16px;
+    max-width: 250px;
+  }
+}
