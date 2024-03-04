@@ -1600,7 +1600,7 @@ address {
     font-size: 14px;
   }
   .title {
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 30px;
   }
   .body--left__img {
@@ -1781,6 +1781,11 @@ address {
               filter: blur(50px);
       z-index: -1;
     }
+  }
+  /*======================About===========================*/
+  .title {
+    font-size: 24px;
+    margin-bottom: 30px;
   }
   /*======================FOOTER===========================*/
   .footer__item-info {
