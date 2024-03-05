@@ -1,7 +1,6 @@
 (() => {
 
 const presentationScreen = document.getElementById('presentationScreen');
-const website = document.getElementById('website');
 const wrapper = document.querySelector('.wrapper');
 const animationHero = document.getElementById('animation__hero-text');
 const animationHeroTeam = document.getElementById('animation__hero-team');
@@ -13,18 +12,18 @@ document.addEventListener('scroll', () => {
         wrapper.classList.add('wrapper__hidden')
         setTimeout(function() {
             wrapper.style.animation = 'none'; 
-        }, 900);
-   
+        }, 1800);
+        if (document.documentElement.clientWidth > 1000) return
+        presentationScreen.style.inset= 'none'; 
+        presentationScreen.style.height= '50%'; 
+        presentationScreen.style.width= '50%'; 
     } 
-    
-    setTimeout(function() {
-        presentationScreen.style.display = 'none'
-    }, 400);
+
     if (presentationScreen.style.zIndex = '-10') return
     presentationScreen.style.zIndex = '-10';
     setTimeout(function() {
         presentationScreen.style.display = 'none'
-    }, 400);
+    }, 1900);
    
 });
 
