@@ -17,6 +17,10 @@ document.addEventListener('scroll', () => {
         presentationScreen.style.inset= 'none'; 
         presentationScreen.style.height= '50%'; 
         presentationScreen.style.width= '50%'; 
+        if (document.documentElement.clientWidth > 450) return
+        presentationScreen.style.inset= 'none'; 
+        presentationScreen.style.height= '25%'; 
+        presentationScreen.style.width= '0%'; 
     } 
 
     if (presentationScreen.style.zIndex = '-10') return
