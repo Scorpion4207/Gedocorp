@@ -147,9 +147,22 @@
   background-color: #071926;
   background-image: url(../img/pattern.png);
   z-index: 1;
-  transition: all .8s;
+
 }
 
+.wrapper__hidden {
+  animation: sait 1s forwards;
+  
+}
+
+@keyframes sait {
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: none;
+  }
+}
 
 
 .main {

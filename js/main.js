@@ -2,20 +2,30 @@
 
 const presentationScreen = document.getElementById('presentationScreen');
 const website = document.getElementById('website');
+const wrapper = document.querySelector('.wrapper');
 const animationHero = document.getElementById('animation__hero-text');
 const animationHeroTeam = document.getElementById('animation__hero-team');
 
 document.addEventListener('scroll', () => {
-    website.style.transform = 'translateY(100%)'; 
-    presentationScreen.style.zIndex = '-10';
-    website.style.transform = 'translateY(0%)';  
-    setTimeout(function() {
-        presentationScreen.style.display = 'none'
-       
-    }, 400);
     animationHero.style.display = 'block';  
     animationHeroTeam.style.display = 'block';  
-    website.style.transform = 'none';  
+    if (!wrapper.classList.contains('wrapper__hidden')) {
+        wrapper.classList.add('wrapper__hidden')
+        setTimeout(function() {
+            wrapper.style.animation = 'none'; 
+        }, 900);
+   
+    } 
+    
+    setTimeout(function() {
+        presentationScreen.style.display = 'none'
+    }, 400);
+    if (presentationScreen.style.zIndex = '-10') return
+    presentationScreen.style.zIndex = '-10';
+    setTimeout(function() {
+        presentationScreen.style.display = 'none'
+    }, 400);
+   
 });
 
 
