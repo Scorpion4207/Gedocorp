@@ -6,13 +6,16 @@ const animationHero = document.getElementById('animation__hero-text');
 const animationHeroTeam = document.getElementById('animation__hero-team');
 
 document.addEventListener('scroll', () => {
+    website.style.transform = 'translateY(100%)'; 
     presentationScreen.style.zIndex = '-10';
-    website.style.transform = 'none';  
+    website.style.transform = 'translateY(0%)';  
     setTimeout(function() {
         presentationScreen.style.display = 'none'
+       
     }, 400);
     animationHero.style.display = 'block';  
     animationHeroTeam.style.display = 'block';  
+    website.style.transform = 'none';  
 });
 
 

@@ -10,6 +10,7 @@
   line-height: 1.32;
   background-color: #071926;
   background-image: url(../img/pattern.png);
+  
 }
 
 /*======================Presentation Screen===========================*/
@@ -27,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 8;
     transition: opacity 0.5s;
   }
 
@@ -147,7 +148,6 @@
   background-image: url(../img/pattern.png);
   z-index: 1;
   transition: all .8s;
-  transform: translateY(100%);
 }
 
 
