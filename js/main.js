@@ -1,5 +1,7 @@
 (() => {
 
+// ==================================Present============================
+    
 const presentationScreen = document.getElementById('presentationScreen');
 const wrapper = document.querySelector('.wrapper');
 const animationHero = document.getElementById('animation__hero-text');
@@ -40,5 +42,31 @@ document.addEventListener('scroll', () => {
           document.body.classList.remove('body--opened-menu')
       }
   }
+
+  // ==================================Tabs============================
+
+  const accordionControls = document.querySelector('.program__accordions-body')
+
+  accordionControls.addEventListener('click', toggleAcord)
+
+  function toggleAcord(e) {
+    
+    const accordionControl = e.target.closest('.accordion')
+    if(!accordionControl) return
+    e.preventDefault()
+
+    const accordionControlID = accordionControl.getAttribute('href')
+
+    
+
+    document.querySelector('.tab--show').classList.remove('tab--show')
+    document.querySelector(accordionControlID).classList.add('tab--show')
+
+    document.querySelector('.accordion--active').classList.remove('accordion--active')
+    accordionControl.classList.add('accordion--active')
+
+  }
+
+
 
 })()

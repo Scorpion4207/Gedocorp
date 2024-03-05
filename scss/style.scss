@@ -157,7 +157,7 @@
 
 @keyframes sait {
   0%{
-    transform: translateY(100%);
+    transform: translateY(30%);
   }
   100%{
     transform: none;
@@ -588,12 +588,71 @@
 
 
 
+/*=========================FOOTER===========================*/
 
 
 
+.program {
+
+  // .program__accordions
+
+  &__accordions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 40px;
+  }
+
+  // .program__accordions-body
+
+  &__accordions-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .program__tabs-img
+
+  &__tabs-img {
+    
+  }
+}
+.accordion {
+  transition: all .5s;
+}
+.accordion--active {
+  transition: all .5s;
+  position: relative;
+}
+
+.accordion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #ec6608;
+  height: 10px;
+  width: 100px;
+  transition: all .5s;
+}
 
 
+.tab {
+  background: #063;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.tab--show {
+  display: block;
+}
 
+
+.pseudo-element {
+  background-color: #ff0000;
+  height: 100%;
+  width: 100%;
+  display: none;
+  transition: all .5s;
+}
 
 
 /*=========================FOOTER===========================*/
