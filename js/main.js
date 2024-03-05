@@ -12,7 +12,7 @@ document.addEventListener('scroll', () => {
         wrapper.classList.add('wrapper__hidden')
         setTimeout(function() {
             wrapper.style.animation = 'none'; 
-        }, 1800);
+        }, 900);
         if (document.documentElement.clientWidth > 1000) return
         presentationScreen.style.inset= 'none'; 
         presentationScreen.style.height= '50%'; 
