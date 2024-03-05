@@ -784,7 +784,7 @@ address {
 /*=========================FOOTER===========================*/
 .program__accordions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   font-size: 40px;
 }
 .program__accordions-body {
@@ -820,23 +820,55 @@ address {
 }
 
 .tab {
-  background: #063;
-  width: 100%;
-  height: 100%;
   display: none;
+}
+
+.tab__voice img {
+  width: 100%;
+}
+
+.tab__voice {
+  width: 100%;
+  position: relative;
+}
+
+.tab__voice {
+  width: 100%;
+}
+
+.voice {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-animation: img-program 2s alternate infinite;
+          animation: img-program 2s alternate infinite;
+}
+
+@-webkit-keyframes img-program {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes img-program {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.tab__voice::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .tab--show {
-  display: block;
-}
-
-.pseudo-element {
-  background-color: #ff0000;
-  height: 100%;
-  width: 100%;
-  display: none;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  display: grid;
 }
 
 /*=========================FOOTER===========================*/

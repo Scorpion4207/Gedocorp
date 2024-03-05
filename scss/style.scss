@@ -10,7 +10,7 @@
   line-height: 1.32;
   background-color: #071926;
   background-image: url(../img/pattern.png);
-  
+
 }
 
 /*======================Presentation Screen===========================*/
@@ -152,14 +152,15 @@
 
 .wrapper__hidden {
   animation: sait 1s forwards;
-  
+
 }
 
 @keyframes sait {
-  0%{
+  0% {
     transform: translateY(30%);
   }
-  100%{
+
+  100% {
     transform: none;
   }
 }
@@ -533,7 +534,7 @@
     max-height: 360px;
     min-height: 300px;
     display: grid;
-    grid-template-columns: 1fr auto ;
+    grid-template-columns: 1fr auto;
     gap: 65px;
   }
 }
@@ -598,7 +599,7 @@
 
   &__accordions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr .9fr;
     font-size: 40px;
   }
 
@@ -611,13 +612,13 @@
 
   // .program__tabs-img
 
-  &__tabs-img {
-    
-  }
+  &__tabs-img {}
 }
+
 .accordion {
   transition: all .5s;
 }
+
 .accordion--active {
   transition: all .5s;
   position: relative;
@@ -636,23 +637,51 @@
 
 
 .tab {
-  background: #063;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-.tab--show {
-  display: block;
-}
-
-
-.pseudo-element {
-  background-color: #ff0000;
-  height: 100%;
-  width: 100%;
   display: none;
-  transition: all .5s;
+
 }
+
+.tab__voice img {
+  width: 100%;
+}
+
+.tab__voice {
+  width: 100%;
+  position: relative;
+}
+.tab__voice {
+  width: 100%;
+}
+.voice {
+  transform: translateY(-100%);
+  animation: img-program 2s alternate infinite;
+}
+
+@keyframes img-program {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+.tab__voice::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+}
+
+
+.tab--show {
+  display: grid;
+}
+
+
+
 
 
 /*=========================FOOTER===========================*/
