@@ -297,8 +297,8 @@ address {
 }
 
 .wrapper__hidden {
-  -webkit-animation: sait 2s forwards;
-          animation: sait 2s forwards;
+  -webkit-animation: sait 1s forwards;
+          animation: sait 1s forwards;
 }
 
 @-webkit-keyframes sait {
