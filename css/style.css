@@ -862,6 +862,12 @@ address {
 .accordion-list__item {
   margin-bottom: 32px;
 }
+.accordion-list__item--opened .accordion-list__control-title {
+  color: var(--blue);
+}
+.accordion-list__item--opened .accordion-list__control-icon path {
+  fill: var(--blue);
+}
 .accordion-list__control {
   display: -webkit-box;
   display: -ms-flexbox;

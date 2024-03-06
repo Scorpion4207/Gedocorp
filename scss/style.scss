@@ -673,12 +673,12 @@
 
   &__item--opened {}
 
-  // &__item--opened &__control-title{
-  //   color: var(--blue);
-  // }
-  // &__item--opened &__control-icon path{
-  //   fill: var(--blue);
-  // }
+  &__item--opened &__control-title{
+    color: var(--blue);
+  }
+  &__item--opened &__control-icon path{
+    fill: var(--blue);
+  }
 
   &__control {
     display: flex;
