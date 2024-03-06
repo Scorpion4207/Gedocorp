@@ -860,7 +860,8 @@ address {
 }
 
 .accordion-list__item {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
+  padding: 0 35px;
 }
 .accordion-list__item--opened .accordion-list__control-title {
   color: var(--blue);
@@ -920,6 +921,13 @@ address {
   overflow: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.accordion-list__item--opened.accordion-list__item {
+  border-radius: 58px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(232, 255, 233, 0.16)), to(rgba(57, 185, 236, 0.16)));
+  background: linear-gradient(180deg, rgba(232, 255, 233, 0.16) 0%, rgba(57, 185, 236, 0.16) 100%);
+  padding: 35px 35px;
 }
 
 /*=========================FOOTER===========================*/

@@ -668,7 +668,8 @@
 .accordion-list {
 
   &__item {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+    padding: 0 35px;
   }
 
   &__item--opened {}
@@ -735,6 +736,12 @@
   max-height: 0;
   overflow: hidden;
   transition: all .3s;
+}
+
+.accordion-list__item--opened.accordion-list__item {
+  border-radius: 58px;
+  background: linear-gradient(180deg, rgba(232, 255, 233, 0.16) 0%, rgba(57, 185, 236, 0.16) 100%);
+  padding: 35px 35px;
 }
 
 
