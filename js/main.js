@@ -1,72 +1,103 @@
 (() => {
 
-// ==================================Present============================
-    
-const presentationScreen = document.getElementById('presentationScreen');
-const wrapper = document.querySelector('.wrapper');
-const animationHero = document.getElementById('animation__hero-text');
-const animationHeroTeam = document.getElementById('animation__hero-team');
+    // ==================================Present============================
 
-document.addEventListener('scroll', () => {
-    animationHero.style.display = 'block';  
-    animationHeroTeam.style.display = 'block';  
-    if (!wrapper.classList.contains('wrapper__hidden')) {
-        wrapper.classList.add('wrapper__hidden')
-        setTimeout(function() {
-            wrapper.style.animation = 'none'; 
-        }, 900);
+    const presentationScreen = document.getElementById('presentationScreen');
+    const wrapper = document.querySelector('.wrapper');
+    const animationHero = document.getElementById('animation__hero-text');
+    const animationHeroTeam = document.getElementById('animation__hero-team');
+
+    document.addEventListener('scroll', () => {
+        animationHero.style.display = 'block';
+        animationHeroTeam.style.display = 'block';
+        if (!wrapper.classList.contains('wrapper__hidden')) {
+            wrapper.classList.add('wrapper__hidden')
+            setTimeout(function () {
+                wrapper.style.animation = 'none';
+            }, 900);
+            if (document.documentElement.clientWidth > 1000) return
+            presentationScreen.style.inset = 'none';
+            presentationScreen.style.height = '50%';
+            presentationScreen.style.width = '50%';
+        }
+
+
+        presentationScreen.style.zIndex = '-10';
+        setTimeout(function () {
+            presentationScreen.style.display = 'none'
+        }, 400);
+
+    });
+
+
+    // ==================================Бургер============================
+    document.addEventListener('click', burgerInit)
+    function burgerInit(e) {
+        const burgerIcon = e.target.closest('.burger__icon')
+        if (!burgerIcon) return
         if (document.documentElement.clientWidth > 1000) return
-        presentationScreen.style.inset= 'none'; 
-        presentationScreen.style.height= '50%'; 
-        presentationScreen.style.width= '50%'; 
-    } 
+        if (!document.body.classList.contains('body--opened-menu')) {
+            document.body.classList.add('body--opened-menu')
+        } else {
+            document.body.classList.remove('body--opened-menu')
+        }
+    }
 
-    if (presentationScreen.style.zIndex = '-10') return
-    presentationScreen.style.zIndex = '-10';
-    setTimeout(function() {
-        presentationScreen.style.display = 'none'
-    }, 1900);
-   
-});
+    // ==================================Tabs============================
 
+    const accordionControls = document.querySelector('.program__accordions-body')
 
-  // ==================================Бургер============================
-  document.addEventListener('click', burgerInit)
-  function burgerInit(e) {
-      const burgerIcon = e.target.closest('.burger__icon')
-      if (!burgerIcon) return
-      if (document.documentElement.clientWidth > 1000) return
-      if (!document.body.classList.contains('body--opened-menu')) {
-          document.body.classList.add('body--opened-menu')
-      } else {
-          document.body.classList.remove('body--opened-menu')
-      }
-  }
+    accordionControls.addEventListener('click', toggleAcord)
 
-  // ==================================Tabs============================
+    function toggleAcord(e) {
 
-  const accordionControls = document.querySelector('.program__accordions-body')
+        const accordionControl = e.target.closest('.accordion')
+        if (!accordionControl) return
+        e.preventDefault()
 
-  accordionControls.addEventListener('click', toggleAcord)
+        const accordionControlID = accordionControl.getAttribute('href')
 
-  function toggleAcord(e) {
-    
-    const accordionControl = e.target.closest('.accordion')
-    if(!accordionControl) return
-    e.preventDefault()
+        document.querySelector('.tab--show').classList.remove('tab--show')
+        document.querySelector(accordionControlID).classList.add('tab--show')
 
-    const accordionControlID = accordionControl.getAttribute('href')
+        document.querySelector('.accordion--active').classList.remove('accordion--active')
+        accordionControl.classList.add('accordion--active')
+    }
 
-    
+    // ==================================Accordion============================
 
-    document.querySelector('.tab--show').classList.remove('tab--show')
-    document.querySelector(accordionControlID).classList.add('tab--show')
+    const accordionLists = document.querySelectorAll('.program__accordions-body');
 
-    document.querySelector('.accordion--active').classList.remove('accordion--active')
-    accordionControl.classList.add('accordion--active')
+    accordionLists.forEach(el => {
 
-  }
+        document.querySelector('.accordion-list__item--opened .accordion-list__content').style.maxHeight = document.querySelector('.accordion-list__item--opened .accordion-list__content').scrollHeight + 'px';
 
+        el.addEventListener('click', (e) => {
+
+           
+            const accordionList = e.currentTarget
+            const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
+            const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
+
+            const accordionControl = e.target.closest('.accordion-list__control')
+            if (!accordionControl) return
+            e.preventDefault();
+            const accordionItem = accordionControl.parentElement;
+            const accordionContent = accordionControl.nextElementSibling;
+
+            if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
+                accordionOpenedItem.classList.remove('accordion-list__item--opened');
+                accordionOpenedContent.style.maxHeight = null
+            }
+            accordionItem.classList.toggle('accordion-list__item--opened');
+
+            if (accordionItem.classList.contains('accordion-list__item--opened')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = null
+            }
+        });
+    });
 
 
 })()
