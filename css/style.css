@@ -148,7 +148,7 @@ address {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 180px;
+  padding: 220px;
   z-index: -3;
 }
 .presentation__screen-title {
@@ -177,8 +177,8 @@ address {
   position: absolute;
   top: -20%;
   right: 0%;
-  height: 1000px;
-  width: 1200px;
+  height: 1100px;
+  width: 1300px;
   background-color: var(--bg);
   border-radius: 50%;
   -webkit-filter: blur(50px);
@@ -193,8 +193,8 @@ address {
   position: absolute;
   top: -20%;
   left: 0%;
-  height: 1000px;
-  width: 1200px;
+  height: 1100px;
+  width: 1300px;
   background-color: var(--bg);
   border-radius: 50%;
   -webkit-filter: blur(50px);
@@ -208,8 +208,8 @@ address {
   100% {
     top: -30%;
     right: -15%;
-    height: 1000px;
-    width: 1050px;
+    height: 1200px;
+    width: 1150px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(-65deg);
@@ -224,8 +224,8 @@ address {
   100% {
     top: -30%;
     right: -15%;
-    height: 1000px;
-    width: 1050px;
+    height: 1200px;
+    width: 1150px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(-65deg);
@@ -239,8 +239,8 @@ address {
   100% {
     top: -30%;
     left: -15%;
-    height: 1000px;
-    width: 1050px;
+    height: 1200px;
+    width: 1150px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(65deg);
@@ -254,8 +254,8 @@ address {
   100% {
     top: -30%;
     left: -15%;
-    height: 1000px;
-    width: 1050px;
+    height: 1200px;
+    width: 1150px;
     background-color: var(--bg);
     border-radius: 50%;
     -webkit-transform: rotate(65deg);
@@ -789,7 +789,7 @@ address {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   max-height: 750px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   gap: 20px;
 }
 .program__accordions-body {
@@ -865,6 +865,8 @@ address {
 .accordion-list__item {
   margin-bottom: 35px;
   padding: 0 35px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 .accordion-list__item--opened .accordion-list__control-title {
   color: var(--blue);
@@ -904,10 +906,11 @@ address {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 .accordion-content {
   font-weight: 400;
   font-size: 24px;
-  line-height: 132%;
+  line-height: 1.3;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 15px;
   margin-left: 58px;
@@ -916,22 +919,24 @@ address {
 .accordion-list__content {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 .accordion-list__item--opened .accordion-list__content {
-  max-height: 0;
+  min-height: 0;
   overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 .accordion-list__item--opened.accordion-list__item {
   border-radius: 58px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(232, 255, 233, 0.16)), to(rgba(57, 185, 236, 0.16)));
   background: linear-gradient(180deg, rgba(232, 255, 233, 0.16) 0%, rgba(57, 185, 236, 0.16) 100%);
-  padding: 35px 35px;
+  padding: 35px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 /*=========================interface===========================*/
@@ -1293,6 +1298,16 @@ address {
 /*========================================================*/
 @media (max-width: 1540px) {
   /*======================Presentation Screen===========================*/
+  .presentation__screen::before {
+    content: "";
+    background-image: url(../img/hero-bg.png);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 200px;
+    z-index: -3;
+  }
   .presentation__screen__psevElem::before {
     content: "";
     position: absolute;
@@ -1543,6 +1558,22 @@ address {
   .body--right__text {
     font-size: 16px;
   }
+  /*======================PROGRAM===========================*/
+  .program__accordions {
+    grid-template-columns: 1fr 1fr;
+  }
+  .accordion-list__item {
+    padding: 0 15px;
+  }
+  .accordion-list__control-title {
+    font-size: 24px;
+  }
+  .accordion-content {
+    font-size: 18px;
+  }
+  .accordion-list__item--opened.accordion-list__item {
+    padding: 20px;
+  }
 }
 @media (max-width: 1000px) {
   /*======================Presentation Screen===========================*/
@@ -1719,6 +1750,16 @@ address {
     line-height: 1.32;
     color: #fff;
     margin-top: 50px;
+  }
+  /*======================PROGRAM===========================*/
+  .program {
+    overflow: visible;
+  }
+  .program__accordions {
+    grid-template-columns: 1fr;
+  }
+  .program__inner {
+    margin-bottom: 1000px;
   }
 }
 @media (max-width: 900px) {
@@ -1936,6 +1977,10 @@ address {
   .body--right__text {
     font-size: 16px;
   }
+  /*======================PROGRAM===========================*/
+  .program__inner {
+    margin-bottom: 700px;
+  }
 }
 @media (max-width: 700px) {
   /*======================Presentation Screen===========================*/
@@ -2071,6 +2116,10 @@ address {
     font-size: 16px;
     margin-top: 0px;
   }
+  /*======================PROGRAM===========================*/
+  .program__inner {
+    margin-bottom: 600px;
+  }
 }
 @media (max-width: 600px) {
   /*======================Presentation Screen===========================*/
@@ -2144,6 +2193,10 @@ address {
       z-index: -1;
     }
   }
+  /*======================PROGRAM===========================*/
+  .program__inner {
+    margin-bottom: 500px;
+  }
   /*======================FOOTER===========================*/
   .footer {
     margin: 0 20px 30px;
@@ -2165,6 +2218,32 @@ address {
   }
   .hero__team-text {
     font-size: 14px;
+  }
+  /*======================PROGRAM===========================*/
+  .program__inner {
+    margin-bottom: 300px;
+  }
+  .accordion-list__item {
+    padding: 0 15px;
+  }
+  .accordion-list__control-title {
+    font-size: 20px;
+    text-align: start;
+  }
+  .accordion-list__control-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  .accordion-list__control-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .accordion-content {
+    font-size: 16px;
+    margin-left: 40px;
+  }
+  .accordion-list__item--opened.accordion-list__item {
+    padding: 20px;
   }
 }
 @media (max-width: 450px) {
@@ -2230,6 +2309,9 @@ address {
     }
   }
   /*======================About===========================*/
+  .about__inner {
+    margin-bottom: 100px;
+  }
   .title {
     font-size: 24px;
     margin-bottom: 30px;
@@ -2270,5 +2352,13 @@ address {
   }
   .hero__team-text {
     font-size: 14px;
+  }
+  /*======================PROGRAM===========================*/
+  .program__inner {
+    margin-bottom: 200px;
+  }
+  .accordion-content {
+    font-size: 14px;
+    margin-left: 40px;
   }
 }

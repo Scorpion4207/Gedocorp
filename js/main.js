@@ -118,10 +118,8 @@
         } 
         if (!animations.classList.contains('interface__button-body--pc') && e.target.closest('.interface__btn-pc')) {
             animations.classList.remove('interface__button-body--tablet')
-            animations.classList.add('interface__button-body--pc')
-            
+            animations.classList.add('interface__button-body--pc')       
         } 
-
     }
 
 })()
