@@ -399,12 +399,74 @@
 
   .program {
     overflow: visible;
+
     &__accordions {
       grid-template-columns: 1fr;
     }
+
     &__inner {
       margin-bottom: 1000px;
     }
+  }
+
+  /*======================interface===========================*/
+
+  .interface {
+
+    &__button-text {
+      font-size: 20px;
+    }
+
+    &__viewing-fon::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: 0%;
+      height: 900px;
+      width: 300px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      filter: blur(50px);
+      transition: all 1s;
+    }
+
+    &__viewing-fon::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 0%;
+      height: 500px;
+      width: 300px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      filter: blur(50px);
+      transition: all 1s;
+    }
+  }
+
+  .interface__button-body--pc .interface__viewing-fon::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 500px;
+    width: 300px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+  }
+
+  .interface__button-body--pc .interface__viewing-fon::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 900px;
+    width: 300px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+
   }
 
 }
@@ -776,6 +838,7 @@
       margin-top: 0px;
     }
   }
+
   /*======================PROGRAM===========================*/
   .program {
     &__inner {
@@ -844,6 +907,11 @@
   }
 
 
+  .interface__viewing-fon {
+    max-height: 550px;
+  }
+
+
   /*======================FOOTER===========================*/
   .footer {
     margin: 0 20px 30px;
@@ -892,10 +960,11 @@
       text-align: start;
     }
 
-    &__control-icon svg{
+    &__control-icon svg {
       width: 25px;
       height: 25px;
     }
+
     &__control-icon {
       width: 25px;
       height: 25px;
@@ -911,6 +980,111 @@
   .accordion-list__item--opened.accordion-list__item {
     padding: 20px;
   }
+
+  /*=========================interface===========================*/
+
+
+
+
+  .interface__viewing-fon {
+    max-height: 500px;
+  }
+
+  .interface {
+
+
+    &__btn-tablet {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px;
+      border-radius: 32px;
+      background: #ffffff14;
+      transition: all .3s;
+    }
+
+    &__btn-pc {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px;
+      border-radius: 32px;
+      background: #ffffff14;
+      transition: all .3s;
+    }
+
+    &__viewing-fon::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: 0%;
+      height: 500px;
+      width: 200px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      filter: blur(50px);
+      transition: all 1s;
+    }
+
+    &__viewing-fon::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 0%;
+      height: 200px;
+      width: 200px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      filter: blur(50px);
+      transition: all 1s;
+    }
+  }
+
+
+  .interface__button-body--pc .interface__viewing-fon::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 200px;
+    width: 200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+  }
+
+  .interface__button-body--pc .interface__viewing-fon::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 500px;
+    width: 200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+
+  }
+
+
+
+
+  .interface__button-tablet img{
+    width: 25px;
+  }
+  .interface__button-PC img{
+    width: 25px;
+  }
+
+  .interface__button-text {
+    font-size: 16px;
+  }
+
+  .interface__button-body {
+    gap: 10px;
+}
 }
 
 @media (max-width: 450px) {
@@ -955,11 +1129,21 @@
 
   .about__inner {
     margin-bottom: 100px;
-}
+  }
 
   .title {
     font-size: 24px;
     margin-bottom: 30px;
+  }
+
+
+
+  .interface__viewing-fon {
+    padding: 60px 20px;
+  }
+
+  .interface__viewing-fon {
+    max-height: 400px;
   }
 
   /*======================FOOTER===========================*/
@@ -1015,6 +1199,7 @@
       font-size: 14px;
     }
   }
+
   /*======================PROGRAM===========================*/
 
   .program {
@@ -1026,5 +1211,14 @@
   .accordion-content {
     font-size: 14px;
     margin-left: 40px;
+  }
+
+  /*=========================interface===========================*/
+
+
+
+
+  .interface__viewing-fon {
+    max-height: 350px;
   }
 }

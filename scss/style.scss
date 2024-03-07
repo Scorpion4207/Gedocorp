@@ -759,7 +759,6 @@
     margin-bottom: 200px;
   }
 
-  // .interface__button-body
 
   &__button-body {
     display: flex;
@@ -768,7 +767,6 @@
     margin: 50px 0 30px;
   }
 
-  // .interface__button
 
   &__btn-tablet {
     display: flex;
@@ -798,11 +796,6 @@
     background: var(--blue);
   }
 
-  // .interface__button-tablet
-
-  &__button-tablet {}
-
-  // .interface__button-text
 
   &__button-text {
     font-weight: 500;
@@ -810,11 +803,6 @@
     color: #fff;
   }
 
-  // .interface__button-PC
-
-  &__button-PC {}
-
-  // .interface__viewing
 
   &__viewing {
     max-height: 700px;
@@ -824,7 +812,7 @@
   }
 
   &__viewing-fon {
-    padding: 100px 0;
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -884,7 +872,7 @@
   // .interface__viewing-PC
 
   &__viewing-PC {
-    transform: translateY(30%);
+    transform: translateY(100%);
     transition: all .5s;
     z-index: 1;
   }
@@ -918,7 +906,7 @@
   }
 
   100% {
-    transform: translateY(30%);
+    transform: translateY(100%);
   }
 }
 
@@ -933,7 +921,7 @@
 
 @keyframes pc {
   0% {
-    transform: translateY(30%);
+    transform: translateY(100%);
   }
 
   100% {
@@ -983,12 +971,6 @@
   
 }
 
-
-.container {}
-
-.first-title {}
-
-.title {}
 
 
 

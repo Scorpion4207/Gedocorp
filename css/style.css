@@ -1001,7 +1001,7 @@ address {
   border-radius: 72px;
 }
 .interface__viewing-fon {
-  padding: 100px 0;
+  padding: 100px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1065,9 +1065,9 @@ address {
   width: 100%;
 }
 .interface__viewing-PC {
-  -webkit-transform: translateY(30%);
-      -ms-transform: translateY(30%);
-          transform: translateY(30%);
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 1;
@@ -1113,8 +1113,8 @@ address {
             transform: translateY(-100%);
   }
   100% {
-    -webkit-transform: translateY(30%);
-            transform: translateY(30%);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
 }
 
@@ -1124,8 +1124,8 @@ address {
             transform: translateY(-100%);
   }
   100% {
-    -webkit-transform: translateY(30%);
-            transform: translateY(30%);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
 }
 .interface__button-body--tablet .interface__btn-tablet {
@@ -1139,8 +1139,8 @@ address {
 
 @-webkit-keyframes pc {
   0% {
-    -webkit-transform: translateY(30%);
-            transform: translateY(30%);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
   100% {
     -webkit-transform: translateY(-100%);
@@ -1150,8 +1150,8 @@ address {
 
 @keyframes pc {
   0% {
-    -webkit-transform: translateY(30%);
-            transform: translateY(30%);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
   100% {
     -webkit-transform: translateY(-100%);
@@ -1761,6 +1761,62 @@ address {
   .program__inner {
     margin-bottom: 1000px;
   }
+  /*======================interface===========================*/
+  .interface__button-text {
+    font-size: 20px;
+  }
+  .interface__viewing-fon::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 900px;
+    width: 300px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .interface__viewing-fon::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 500px;
+    width: 300px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .interface__button-body--pc .interface__viewing-fon::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 500px;
+    width: 300px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+  .interface__button-body--pc .interface__viewing-fon::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 900px;
+    width: 300px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
 }
 @media (max-width: 900px) {
   /*======================HERO===========================*/
@@ -2197,6 +2253,9 @@ address {
   .program__inner {
     margin-bottom: 500px;
   }
+  .interface__viewing-fon {
+    max-height: 550px;
+  }
   /*======================FOOTER===========================*/
   .footer {
     margin: 0 20px 30px;
@@ -2244,6 +2303,104 @@ address {
   }
   .accordion-list__item--opened.accordion-list__item {
     padding: 20px;
+  }
+  /*=========================interface===========================*/
+  .interface__viewing-fon {
+    max-height: 500px;
+  }
+  .interface__btn-tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.0784313725);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .interface__btn-pc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.0784313725);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .interface__viewing-fon::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 500px;
+    width: 200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .interface__viewing-fon::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 200px;
+    width: 200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .interface__button-body--pc .interface__viewing-fon::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 200px;
+    width: 200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+  .interface__button-body--pc .interface__viewing-fon::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 500px;
+    width: 200px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+  .interface__button-tablet img {
+    width: 25px;
+  }
+  .interface__button-PC img {
+    width: 25px;
+  }
+  .interface__button-text {
+    font-size: 16px;
+  }
+  .interface__button-body {
+    gap: 10px;
   }
 }
 @media (max-width: 450px) {
@@ -2316,6 +2473,12 @@ address {
     font-size: 24px;
     margin-bottom: 30px;
   }
+  .interface__viewing-fon {
+    padding: 60px 20px;
+  }
+  .interface__viewing-fon {
+    max-height: 400px;
+  }
   /*======================FOOTER===========================*/
   .footer__item-info {
     font-weight: 400;
@@ -2360,5 +2523,9 @@ address {
   .accordion-content {
     font-size: 14px;
     margin-left: 40px;
+  }
+  /*=========================interface===========================*/
+  .interface__viewing-fon {
+    max-height: 350px;
   }
 }
