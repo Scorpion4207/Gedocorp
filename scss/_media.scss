@@ -236,6 +236,11 @@
   .accordion-list__item--opened.accordion-list__item {
     padding: 20px;
   }
+
+
+  .text {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -845,6 +850,11 @@
       margin-bottom: 600px;
     }
   }
+
+
+  .text {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -991,7 +1001,9 @@
   }
 
   .interface {
-
+    &__inner {
+      margin-bottom: 100px;
+    }
 
     &__btn-tablet {
       display: flex;
@@ -1085,6 +1097,14 @@
   .interface__button-body {
     gap: 10px;
 }
+
+.text {
+  font-size: 14px;
+  &__inner {
+    margin-bottom: 100px;
+  }
+}
+
 }
 
 @media (max-width: 450px) {

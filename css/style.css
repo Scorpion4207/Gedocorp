@@ -1214,6 +1214,29 @@ address {
           filter: blur(50px);
 }
 
+/*=========================TEXT===========================*/
+.text {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.33;
+  color: #fff;
+  overflow: hidden;
+}
+.text__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
 /*=========================FOOTER===========================*/
 .footer {
   background: linear-gradient(141deg, rgba(57, 185, 236, 0.4862745098) 0%, rgba(0, 102, 51, 0.4901960784) 100%);
@@ -1573,6 +1596,9 @@ address {
   }
   .accordion-list__item--opened.accordion-list__item {
     padding: 20px;
+  }
+  .text {
+    font-size: 30px;
   }
 }
 @media (max-width: 1000px) {
@@ -2176,6 +2202,9 @@ address {
   .program__inner {
     margin-bottom: 600px;
   }
+  .text {
+    font-size: 20px;
+  }
 }
 @media (max-width: 600px) {
   /*======================Presentation Screen===========================*/
@@ -2308,6 +2337,9 @@ address {
   .interface__viewing-fon {
     max-height: 500px;
   }
+  .interface__inner {
+    margin-bottom: 100px;
+  }
   .interface__btn-tablet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2401,6 +2433,12 @@ address {
   }
   .interface__button-body {
     gap: 10px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .text__inner {
+    margin-bottom: 100px;
   }
 }
 @media (max-width: 450px) {
