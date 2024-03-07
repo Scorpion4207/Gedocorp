@@ -100,4 +100,28 @@
     });
 
 
+    // ==================================interface============================
+    const animations = document.querySelector('.interface__inner')
+
+    animations.addEventListener('click', toggleInterface)
+
+    function toggleInterface(e) {
+        const tablet = e.target.closest('.interface__btn-tablet')
+        const pc = e.target.closest('.interface__btn-pc')
+
+        if (!tablet && !pc) return
+
+        if (!animations.classList.contains('interface__button-body--tablet') && e.target.closest('.interface__btn-tablet')) {
+            animations.classList.remove('interface__button-body--pc')
+            animations.classList.add('interface__button-body--tablet')
+            
+        } 
+        if (!animations.classList.contains('interface__button-body--pc') && e.target.closest('.interface__btn-pc')) {
+            animations.classList.remove('interface__button-body--tablet')
+            animations.classList.add('interface__button-body--pc')
+            
+        } 
+
+    }
+
 })()

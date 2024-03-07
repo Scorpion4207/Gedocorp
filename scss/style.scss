@@ -670,14 +670,16 @@
   &__item {
     margin-bottom: 35px;
     padding: 0 35px;
+
   }
 
   &__item--opened {}
 
-  &__item--opened &__control-title{
+  &__item--opened &__control-title {
     color: var(--blue);
   }
-  &__item--opened &__control-icon path{
+
+  &__item--opened &__control-icon path {
     fill: var(--blue);
   }
 
@@ -686,6 +688,7 @@
     align-items: center;
     gap: 16px;
     background: transparent;
+    width: 100%;
   }
 
   &__control:hover &__control-title {
@@ -743,6 +746,253 @@
   background: linear-gradient(180deg, rgba(232, 255, 233, 0.16) 0%, rgba(57, 185, 236, 0.16) 100%);
   padding: 35px 35px;
 }
+
+
+
+
+/*=========================interface===========================*/
+
+
+
+.interface {
+
+  &__inner {
+    margin-bottom: 200px;
+  }
+
+  // .interface__button-body
+
+  &__button-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 50px 0 30px;
+  }
+
+  // .interface__button
+
+  &__btn-tablet {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 32px;
+    background: #ffffff14;
+    transition: all .3s;
+  }
+  &__btn-pc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 32px;
+    background: #ffffff14;
+    transition: all .3s;
+  }
+
+  &__btn-tablet:hover {
+    background: var(--blue);
+  }
+  &__btn-pc:hover {
+    background: var(--blue);
+  }
+
+  // .interface__button-tablet
+
+  &__button-tablet {}
+
+  // .interface__button-text
+
+  &__button-text {
+    font-weight: 500;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  // .interface__button-PC
+
+  &__button-PC {}
+
+  // .interface__viewing
+
+  &__viewing {
+    max-height: 700px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 72px;
+  }
+
+  &__viewing-fon {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__viewing-fon::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    height: 900px;
+    width: 600px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+    transition: all 1s;
+  }
+
+  &__viewing-fon::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    height: 500px;
+    width: 700px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    filter: blur(50px);
+    transition: all 1s;
+  }
+
+  &__viewing::before {
+    content: '';
+    background-image: url(../img/hero-bg.png);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 220px;
+    filter: blur(150px);
+  }
+
+
+
+
+  &__viewing-tablet {
+    transform: translateY(150%);
+    transition: all .5s;
+    z-index: 1;
+  }
+
+  &__viewing-tablet img {
+    width: 100%;
+  }
+
+  // .interface__viewing-PC
+
+  &__viewing-PC {
+    transform: translateY(30%);
+    transition: all .5s;
+    z-index: 1;
+  }
+
+  &__viewing-PC img {
+    width: 100%;
+  }
+}
+
+
+.interface__button-body--tablet .interface__viewing-tablet {
+  animation: tablet 1s .5s forwards;
+}
+
+@keyframes tablet {
+  0% {
+    transform: translateY(150%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+.interface__button-body--tablet .interface__viewing-PC{
+  animation: pc-tablet 1s forwards;
+}
+
+@keyframes pc-tablet {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(30%);
+  }
+}
+
+.interface__button-body--tablet .interface__btn-tablet {
+  background: var(--blue);
+}
+
+
+.interface__button-body--pc .interface__viewing-PC {
+  animation: pc 1s .5s forwards;
+}
+
+@keyframes pc {
+  0% {
+    transform: translateY(30%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.interface__button-body--pc .interface__viewing-tablet {
+  animation: tablet-pc 1s  forwards;
+}
+
+@keyframes tablet-pc {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(150%);
+  }
+}
+
+.interface__button-body--pc .interface__btn-pc {
+  background: var(--blue);
+}
+
+.interface__button-body--pc .interface__viewing-fon::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: 0%;
+  height: 500px;
+  width: 700px;
+  background-color: var(--bg);
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.interface__button-body--pc .interface__viewing-fon::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 0%;
+  height: 900px;
+  width: 600px;
+  background-color: var(--bg);
+  border-radius: 50%;
+  filter: blur(50px);
+  
+}
+
+
+.container {}
+
+.first-title {}
+
+.title {}
+
+
+
 
 
 /*=========================FOOTER===========================*/
