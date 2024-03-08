@@ -950,9 +950,39 @@
     &__team-text {
       font-size: 14px;
     }
+    &__img {
+      border-radius: 36px;
+    }
   }
 
+
+  /*=========================ABOUT===========================*/
+
+
+.about {
+
+  &__body--left {
+    border-radius: 40px;
+  }
+
+  &__body--right {
+    border-radius: 40px;
+  }
+}
+
   /*======================PROGRAM===========================*/
+
+  .tab__img img {
+    border-radius: 40px;
+  }
+
+  .tab__img {
+    border-radius: 40px;
+  }
+  
+  .tab__img-dark {
+    border-radius: 40px;
+  }
 
   .program {
     &__inner {
@@ -988,8 +1018,10 @@
 
 
   .accordion-list__item--opened.accordion-list__item {
+    border-radius: 40px;
     padding: 20px;
   }
+  
 
   /*=========================interface===========================*/
 
@@ -1025,6 +1057,13 @@
       border-radius: 32px;
       background: #ffffff14;
       transition: all .3s;
+    }
+
+    &__viewing {
+      max-height: 700px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 40px;
     }
 
     &__viewing-fon::before {
@@ -1083,10 +1122,11 @@
 
 
 
-  .interface__button-tablet img{
+  .interface__button-tablet img {
     width: 25px;
   }
-  .interface__button-PC img{
+
+  .interface__button-PC img {
     width: 25px;
   }
 
@@ -1096,14 +1136,132 @@
 
   .interface__button-body {
     gap: 10px;
-}
-
-.text {
-  font-size: 14px;
-  &__inner {
-    margin-bottom: 100px;
   }
-}
+
+  .text {
+    font-size: 14px;
+
+    &__inner {
+      margin-bottom: 100px;
+    }
+  }
+
+
+  /*=========================CONTACT===========================*/
+
+  .contact {
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto 100px;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__input {
+      display: block;
+      background: rgba(255, 255, 255, 0.16);
+      width: 100%;
+      height: 45px;
+      border-radius: 14px;
+      padding: 36px 25px;
+      transition: all .5s;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.66);
+    }
+
+    &__input:nth-child(4) {
+      height: 175px;
+      resize: none;
+      overflow-y: hidden;
+    }
+
+    &__input:hover {
+      background: rgba(255, 255, 255, 0.34);
+    }
+
+    &__input:focus {
+      border: 1px solid var(--blue);
+      color: var(--blue);
+      transition: all .5s;
+    }
+
+    &__check-label {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      gap: 15px;
+      margin: 0 auto 25px;
+      max-width: 695px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #fff;
+      transition: all .5s;
+      cursor: pointer;
+    }
+
+    &__check-label:hover {
+      color: var(--blue);
+    }
+
+    &__checkbox {
+      appearance: none;
+      border: 2px solid #fff;
+      border-radius: 7px;
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      transition: all .5s;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__checkbox::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("../img/check-mobile.svg") 50% 50% no-repeat;
+      transition: all .5s;
+      opacity: 0;
+    }
+
+    &__checkbox:hover {
+      border: 2px solid var(--blue);
+    }
+
+    &__checkbox:checked {
+      border: 2px solid var(--blue);
+    }
+
+    &__checkbox:checked::before {
+      opacity: 1;
+    }
+
+    &__button {
+      border-radius: 67px;
+      max-width: 200px;
+      width: 100%;
+      height: 50px;
+      background-color: var(--blue);
+      margin: 0 auto;
+      font-weight: 500;
+      font-size: 16px;
+      color: #fff;
+      transition: all .5s;
+    }
+
+    &__button:hover {
+      background: #83d7f9;
+    }
+  }
 
 }
 

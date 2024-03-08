@@ -793,7 +793,7 @@ html {
 .program__accordions {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  max-height: 750px;
+  max-height: 800px;
   margin-bottom: 100px;
   gap: 20px;
 }
@@ -1271,7 +1271,6 @@ html {
   height: 100px;
   border-radius: 35px;
   padding: 36px 25px;
-  font-size: 16px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin-bottom: 20px;
@@ -1300,6 +1299,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: left;
   gap: 15px;
   margin: 0 auto 60px;
   max-width: 695px;
@@ -2433,7 +2433,26 @@ html {
   .hero__team-text {
     font-size: 14px;
   }
+  .hero__img {
+    border-radius: 36px;
+  }
+  /*=========================ABOUT===========================*/
+  .about__body--left {
+    border-radius: 40px;
+  }
+  .about__body--right {
+    border-radius: 40px;
+  }
   /*======================PROGRAM===========================*/
+  .tab__img img {
+    border-radius: 40px;
+  }
+  .tab__img {
+    border-radius: 40px;
+  }
+  .tab__img-dark {
+    border-radius: 40px;
+  }
   .program__inner {
     margin-bottom: 300px;
   }
@@ -2457,6 +2476,7 @@ html {
     margin-left: 40px;
   }
   .accordion-list__item--opened.accordion-list__item {
+    border-radius: 40px;
     padding: 20px;
   }
   /*=========================interface===========================*/
@@ -2495,6 +2515,12 @@ html {
     background: rgba(255, 255, 255, 0.0784313725);
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+  }
+  .interface__viewing {
+    max-height: 700px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 40px;
   }
   .interface__viewing-fon::before {
     content: "";
@@ -2565,6 +2591,126 @@ html {
   }
   .text__inner {
     margin-bottom: 100px;
+  }
+  /*=========================CONTACT===========================*/
+  .contact__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto 100px;
+    max-width: 900px;
+    text-align: center;
+  }
+  .contact__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact__input {
+    display: block;
+    background: rgba(255, 255, 255, 0.16);
+    width: 100%;
+    height: 45px;
+    border-radius: 14px;
+    padding: 36px 25px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.66);
+  }
+  .contact__input:nth-child(4) {
+    height: 175px;
+    resize: none;
+    overflow-y: hidden;
+  }
+  .contact__input:hover {
+    background: rgba(255, 255, 255, 0.34);
+  }
+  .contact__input:focus {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .contact__check-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+    gap: 15px;
+    margin: 0 auto 25px;
+    max-width: 695px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  .contact__check-label:hover {
+    color: var(--blue);
+  }
+  .contact__checkbox {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    width: 30px;
+    height: 30px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    cursor: pointer;
+  }
+  .contact__checkbox::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/check-mobile.svg") 50% 50% no-repeat;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .contact__checkbox:hover {
+    border: 2px solid var(--blue);
+  }
+  .contact__checkbox:checked {
+    border: 2px solid var(--blue);
+  }
+  .contact__checkbox:checked::before {
+    opacity: 1;
+  }
+  .contact__button {
+    border-radius: 67px;
+    max-width: 200px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--blue);
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .contact__button:hover {
+    background: #83d7f9;
   }
 }
 @media (max-width: 450px) {

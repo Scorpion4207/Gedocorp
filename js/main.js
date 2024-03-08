@@ -35,8 +35,9 @@
     function burgerInit(e) {
         
         const burgerIcon = e.target.closest('.burger__icon')
-        if (!burgerIcon) return
-        e.preventDefault();
+        const burgerNavLink = e.target.closest('.header__nav-mobile')
+        if (!burgerIcon && !burgerNavLink) return
+        
         if (document.documentElement.clientWidth > 1000) return
         if (!document.body.classList.contains('body--opened-menu')) {
             document.body.classList.add('body--opened-menu')
@@ -76,7 +77,6 @@
 
         el.addEventListener('click', (e) => {
 
-           
             const accordionList = e.currentTarget
             const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
             const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')

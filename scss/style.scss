@@ -605,7 +605,7 @@ html {
   &__accordions {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    max-height: 750px;
+    max-height: 800px;
     margin-bottom: 100px;
     gap: 20px;
   }
@@ -1014,25 +1014,10 @@ html {
     text-align: center;
   }
 
-
-  &__first-title {}
-
-  // .contact__title
-
-  &__title {}
-
-  // .contact__form
-
   &__form {
     display: flex;
     flex-direction: column;
   }
-
-  // .contact__label
-
-  &__label {}
-
-  // .contact__input
 
   &__input {
     display: block;
@@ -1041,7 +1026,6 @@ html {
     height: 100px;
     border-radius: 35px;
     padding: 36px 25px;
-    font-size: 16px;
     transition: all .5s;
     margin-bottom: 20px;
     font-weight: 400;
@@ -1065,16 +1049,10 @@ html {
     transition: all .5s;
   }
 
-
-  // .contact__form-label
-
-  &__form-label {}
-
-  // .contact__check-label
-
   &__check-label {
     display: flex;
     align-items: center;
+    text-align: left;
     gap: 15px;
     margin: 0 auto 60px;
     max-width: 695px;
@@ -1088,8 +1066,6 @@ html {
   &__check-label:hover {
     color: var(--blue);
   }
-
-  // .contact__checkbox
 
   &__checkbox {
     appearance: none;
