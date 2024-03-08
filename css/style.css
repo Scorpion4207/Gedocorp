@@ -1362,6 +1362,9 @@ html {
 .contact__button:hover {
   background: #83d7f9;
 }
+.contact__button:active {
+  background: #ec6608;
+}
 
 /*=========================FOOTER===========================*/
 .footer {
