@@ -25,7 +25,7 @@
         presentationScreen.style.zIndex = '-10';
         setTimeout(function () {
             presentationScreen.style.display = 'none'
-        }, 400);
+        }, 800);
 
     });
 
@@ -33,8 +33,10 @@
     // ==================================Бургер============================
     document.addEventListener('click', burgerInit)
     function burgerInit(e) {
+        
         const burgerIcon = e.target.closest('.burger__icon')
         if (!burgerIcon) return
+        e.preventDefault();
         if (document.documentElement.clientWidth > 1000) return
         if (!document.body.classList.contains('body--opened-menu')) {
             document.body.classList.add('body--opened-menu')
@@ -121,5 +123,11 @@
             animations.classList.add('interface__button-body--pc')       
         } 
     }
+
+    // =========================Маска для телефона==================================
+    
+    const telInpust = document.querySelectorAll('input[type="tel"]');
+    let im = new Inputmask('+ 7 (999) 999 99 99');
+    im.mask(telInpust)
 
 })()
