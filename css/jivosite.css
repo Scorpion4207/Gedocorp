@@ -12,6 +12,9 @@
 	z-index: 5;
 	height: 40px;
 	cursor: pointer;
+	height: 100px;
+	border-radius: 30px;
+	background: linear-gradient(136deg, #39b9ec 0%, #063 100%);
 }
 
 
@@ -35,6 +38,7 @@
 /* if there are operators online - show other label*/
 #jivo_custom_widget.jivo_online{
 	height: 100px;
+	width: 100px;
 	background: linear-gradient(136deg, #39b9ec 0%, #063 100%);
 	border-radius: 30px;
 
@@ -50,10 +54,9 @@
 		z-index: 7;
 		height: 40px;
 		cursor: pointer;
-		
-		
-		
+		border-radius: 10px;
 	}
+
 	#jivo_custom_widget::before{
 		content: '';
 		position: fixed;
