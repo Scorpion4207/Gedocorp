@@ -183,6 +183,20 @@ html {
   height: 100%;
 }
 
+.chat-pc {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  height: 80px;
+  width: 80px;
+  z-index: 5;
+}
+.chat-pc img{
+  width: 100%;
+  background: linear-gradient(139deg, #39b9ec 0%, #063 100%);
+  padding: 10px;
+  border-radius: 20px;
+}
 
 /*==============================HEADER====================================*/
 
@@ -355,6 +369,15 @@ html {
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+}
+.chat img{
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(139deg, #39b9ec 0%, #063 100%);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
 
 

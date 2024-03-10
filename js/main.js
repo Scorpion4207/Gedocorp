@@ -1,5 +1,19 @@
 (() => {
 
+    document.getElementById("jivo-chat-icon").addEventListener("click", function() {
+        jivo_api.open();
+    });
+
+    document.getElementById("jivo-chat").addEventListener("click", function() {
+        jivo_api.open();
+    });
+
+ 
+
+        
+
+
+
     // ==================================Present============================
 
     const presentationScreen = document.getElementById('presentationScreen');
@@ -15,10 +29,10 @@
             setTimeout(function () {
                 wrapper.style.animation = 'none';
             }, 900);
-            if (document.documentElement.clientWidth > 1000) return
-            presentationScreen.style.inset = 'none';
-            presentationScreen.style.height = '50%';
-            presentationScreen.style.width = '50%';
+            // if (document.documentElement.clientWidth > 1000) return
+            // presentationScreen.style.inset = 'none';
+            // presentationScreen.style.height = '50%';
+            // presentationScreen.style.width = '50%';
             if (document.documentElement.clientWidth > 500) return
             presentationScreen.style.inset = 'none';
             presentationScreen.style.height = '80%';
