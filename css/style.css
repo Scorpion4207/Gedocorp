@@ -2448,6 +2448,7 @@ html {
 @media (max-width: 500px) {
   /*======================HERO===========================*/
   .hero__inner {
+    margin: 100px 0;
     padding: 0 10px;
   }
   .hero__text {
@@ -2840,7 +2841,6 @@ html {
   }
   /*======================HERO===========================*/
   .hero__inner {
-    margin: 100px 0;
     padding: 0 10px;
   }
   .hero__text {
