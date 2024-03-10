@@ -1,18 +1,5 @@
 (() => {
 
-    document.getElementById("jivo-chat-icon").addEventListener("click", function() {
-        jivo_api.open();
-    });
-
-    document.getElementById("jivo-chat").addEventListener("click", function() {
-        jivo_api.open();
-    });
-
- 
-
-        
-
-
 
     // ==================================Present============================
 
