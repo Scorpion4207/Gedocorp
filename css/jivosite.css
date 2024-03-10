@@ -84,3 +84,32 @@
 	
 	}
 }
+
+@media (max-width: 450px) {
+	#jivo_custom_widget{
+		position: fixed;
+		top: 3%;
+		left: 2%;
+		height: 40px;
+		width: 40px;
+		z-index: 7;
+		height: 40px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+
+	#jivo_custom_widget::before{
+		content: '';
+		position: fixed;
+		top: 3%;
+		left: 2%;
+		height: 40px;
+		width: 40px;
+		background-image: url(../img/chat.svg);
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		border-radius: 10px;
+	
+	}
+}
