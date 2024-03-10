@@ -101,8 +101,8 @@
 	#jivo_custom_widget::before{
 		content: '';
 		position: fixed;
-		top: 3%;
-		left: 2%;
+		top: 20px;
+		left: 15px;
 		height: 40px;
 		width: 40px;
 		background-image: url(../img/chat.svg);
