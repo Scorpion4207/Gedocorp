@@ -2056,8 +2056,16 @@ html {
         -ms-transform: translateX(0);
             transform: translateX(0);
   }
+  .hero__inner {
+    margin: 200px 0;
+    padding: 0;
+    display: grid;
+    gap: 40px 10px;
+    grid-template-columns: 1fr 1fr;
+  }
   /*======================ABOUT===========================*/
   .about__inner {
+    padding-bottom: 0;
     margin-bottom: 200px;
   }
   .about__body {
@@ -2130,6 +2138,10 @@ html {
     margin-bottom: 1000px;
   }
   /*======================interface===========================*/
+  .interface__inner {
+    margin-bottom: 200px;
+    padding-bottom: 0;
+  }
   .interface__button-text {
     font-size: 20px;
   }
@@ -2184,6 +2196,14 @@ html {
     border-radius: 50%;
     -webkit-filter: blur(50px);
             filter: blur(50px);
+  }
+  .text__inner {
+    margin-bottom: 200px;
+    padding-bottom: 0;
+  }
+  .contact__inner {
+    margin-bottom: 100px 0;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 900px) {

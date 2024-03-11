@@ -282,16 +282,16 @@
     display: none;
   }
 
-   /*======================fixed-nav ===========================*/
+  /*======================fixed-nav ===========================*/
 
   .fixed-nav {
     display: none;
   }
 
-  .body--opened-menu .burger__icon{
+  .body--opened-menu .burger__icon {
     margin-top: auto;
   }
-  
+
 
   /*======================HEADER===========================*/
   .header {
@@ -332,11 +332,23 @@
   }
 
 
+  .hero {
+
+    &__inner {
+      margin: 200px 0;
+      padding: 0;
+      display: grid;
+      gap: 40px 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   /*======================ABOUT===========================*/
 
   .about {
 
     &__inner {
+      padding-bottom: 0;
       margin-bottom: 200px;
     }
 
@@ -426,6 +438,12 @@
 
   .interface {
 
+
+    &__inner {
+      margin-bottom: 200px;
+      padding-bottom: 0;
+    }
+
     &__button-text {
       font-size: 20px;
     }
@@ -482,6 +500,22 @@
 
   }
 
+
+  .text {
+
+    &__inner {
+      margin-bottom: 200px;
+      padding-bottom: 0;
+    }
+  }
+
+  .contact {
+
+    &__inner {
+      margin-bottom: 100px 0;
+      padding-bottom: 0;
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -948,10 +982,10 @@
   /*======================Presentation Screen===========================*/
 
   .presentation {
-  &__screen::before {
-    padding: 210px;
+    &__screen::before {
+      padding: 210px;
+    }
   }
-}
 
   .presentation__screen__psevElem::before {
     content: '';
@@ -1015,24 +1049,24 @@
 
 
   /*======================header__list-mobile===========================*/
-  
-.header__list-mobile {
-  background: linear-gradient(147deg, #2d6e58 0%, #005270 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 15%;
-  left: 5%;
-  right: 5%;
-  font-weight: 400;
-  font-size: 20px;
-  color: #fff;
-  border-radius: 35px;
-  padding: 50px;
-  gap: 20px;
-}
+
+  .header__list-mobile {
+    background: linear-gradient(147deg, #2d6e58 0%, #005270 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 35px;
+    padding: 50px;
+    gap: 20px;
+  }
 
   /*======================HERO===========================*/
 
