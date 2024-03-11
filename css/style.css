@@ -823,7 +823,7 @@ html {
 
 /*=========================HERO===========================*/
 .hero__inner {
-  margin: 200px 0;
+  padding: 200px 0;
   display: grid;
   gap: 40px 10px;
   grid-template-columns: 1fr 1fr;
@@ -927,7 +927,7 @@ html {
 }
 /*=========================ABOUT===========================*/
 .about__inner {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
 }
 .about__body {
   display: -webkit-box;
@@ -1010,7 +1010,7 @@ html {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   max-height: 800px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   gap: 20px;
 }
 .program__accordions-body {
@@ -1162,7 +1162,7 @@ html {
 
 /*=========================interface===========================*/
 .interface__inner {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
 }
 .interface__button-body {
   display: -webkit-box;
@@ -1455,7 +1455,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-bottom: 200px;
+  padding-bottom: 200px;
 }
 
 /*=========================CONTACT===========================*/
@@ -1467,7 +1467,8 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto 100px;
+  margin: 0 auto;
+  padding-bottom: 100px;
   max-width: 900px;
   text-align: center;
 }
