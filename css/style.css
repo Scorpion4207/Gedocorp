@@ -637,12 +637,15 @@ html {
       align-self: center;
 }
 .hero__text {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 32px;
   line-height: 132%;
   color: #fff;
   overflow: hidden;
   margin-bottom: 35px;
+}
+.hero__text span {
+  font-weight: 600;
 }
 .hero__team {
   display: -webkit-box;
@@ -2446,6 +2449,100 @@ html {
   }
 }
 @media (max-width: 500px) {
+  /*======================Presentation Screen===========================*/
+  .presentation__screen::before {
+    padding: 210px;
+  }
+  .presentation__screen__psevElem::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: -60%;
+    height: 800px;
+    width: 450px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    z-index: -1;
+    -webkit-animation: presentation-before 2.5s forwards;
+            animation: presentation-before 2.5s forwards;
+  }
+  .presentation__screen__psevElem::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -60%;
+    height: 800px;
+    width: 450px;
+    background-color: var(--bg);
+    border-radius: 50%;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    z-index: -1;
+    -webkit-animation: presentation-after 2.5s forwards;
+            animation: presentation-after 2.5s forwards;
+  }
+  @-webkit-keyframes presentation-before {
+    100% {
+      top: -5%;
+      right: -85%;
+      height: 700px;
+      width: 350px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(95deg);
+              transform: rotate(95deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-before {
+    100% {
+      top: -5%;
+      right: -85%;
+      height: 700px;
+      width: 350px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(95deg);
+              transform: rotate(95deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @-webkit-keyframes presentation-after {
+    100% {
+      top: -5%;
+      left: -85%;
+      height: 700px;
+      width: 350px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-95deg);
+              transform: rotate(-95deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
+  @keyframes presentation-after {
+    100% {
+      top: -5%;
+      left: -85%;
+      height: 700px;
+      width: 350px;
+      background-color: var(--bg);
+      border-radius: 50%;
+      -webkit-transform: rotate(-95deg);
+              transform: rotate(-95deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      z-index: -1;
+    }
+  }
   /*======================HERO===========================*/
   .hero__inner {
     margin: 100px 0;
@@ -2738,67 +2835,6 @@ html {
   }
 }
 @media (max-width: 450px) {
-  /*======================Presentation Screen===========================*/
-  @-webkit-keyframes presentation-before {
-    100% {
-      top: 10%;
-      right: -70%;
-      height: 500px;
-      width: 450px;
-      background-color: var(--bg);
-      border-radius: 50%;
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      -webkit-filter: blur(50px);
-              filter: blur(50px);
-      z-index: -1;
-    }
-  }
-  @keyframes presentation-before {
-    100% {
-      top: 10%;
-      right: -70%;
-      height: 500px;
-      width: 450px;
-      background-color: var(--bg);
-      border-radius: 50%;
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      -webkit-filter: blur(50px);
-              filter: blur(50px);
-      z-index: -1;
-    }
-  }
-  @-webkit-keyframes presentation-after {
-    100% {
-      top: 10%;
-      left: -70%;
-      height: 500px;
-      width: 450px;
-      background-color: var(--bg);
-      border-radius: 50%;
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-      -webkit-filter: blur(50px);
-              filter: blur(50px);
-      z-index: -1;
-    }
-  }
-  @keyframes presentation-after {
-    100% {
-      top: 10%;
-      left: -70%;
-      height: 500px;
-      width: 450px;
-      background-color: var(--bg);
-      border-radius: 50%;
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-      -webkit-filter: blur(50px);
-              filter: blur(50px);
-      z-index: -1;
-    }
-  }
   /*======================About===========================*/
   .about__inner {
     margin-bottom: 100px;
@@ -2826,9 +2862,6 @@ html {
 }
 @media (max-width: 400px) {
   /*======================Presentation Screen===========================*/
-  .presentation__screen::before {
-    padding: 250px;
-  }
   .presentation__screen-title {
     font-size: 60px;
   }
