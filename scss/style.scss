@@ -199,6 +199,7 @@ html {
   border-radius: 20px;
 }
 
+/*======================fixed-nav ===========================*/
 
 .fixed-nav {
   position: fixed;
@@ -209,14 +210,18 @@ html {
   width: 100%;
   background: #fff;
   z-index: 5;
-  padding: 35px;
+  padding: 10px 15px;
   border-radius: 34px;
-  cursor: pointer;
+  overflow: hidden;
+}
+
+.body--opened-menu .fixed-nav {
+  padding: 40px;
 }
 
 .fixed-nav__content {
   display: flex;
-
+  z-index: 5;
 }
 
 .fixed-nav-list {}
@@ -271,18 +276,60 @@ html {
   color: #fff;
   transition: all .3s;
 }
+
 .fixed-nav-contact:hover {
   color: var(--button-hover);
 }
 
 
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.body--opened-menu .toggleButton {
+  max-height: 25px;
+}
 
 #content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
- 
+
+}
+
+.chat-fixed-nav {
+  background: linear-gradient(159deg, #39b9ec 0%, #063 100%);
+  padding: 10px;
+  border-radius: 26px;
+  z-index: 7;
+  transition: all .3s;
+}
+
+.body--opened-menu .chat-fixed-nav {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+
+
+.fixed-menu {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(16, 16, 16, 0.65);
+  transform: translateX(-230px);
+  text-align: left;
+  transition: all .3s;
+}
+
+.body--opened-menu .fixed-menu {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.body--opened-menu .burger__icon {
+  margin-top: 40px;
 }
 
 /*==============================HEADER====================================*/
@@ -309,6 +356,7 @@ html {
     font-size: 24px;
     line-height: 142%;
     color: #fff;
+    z-index: 5;
   }
 
   &__item:nth-child(2) {
@@ -471,6 +519,7 @@ html {
     align-items: center;
     justify-content: center;
     transition: all .3s;
+    z-index: 3;
   }
 
   &__icon span,
@@ -522,6 +571,31 @@ html {
   display: none;
 }
 
+.header__list-mobile {
+  background: linear-gradient(147deg, #2d6e58 0%, #005270 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15%;
+  left: 5%;
+  right: 5%;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 35px;
+  padding: 50px;
+  gap: 50px;
+}
+
+.header__item-mobile {
+  transition: all .3s;
+  text-align: center;
+}
+.header__item-mobile:hover {
+  color: var(--button-hover);
+}
 /*=========================HERO===========================*/
 
 

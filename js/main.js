@@ -1,5 +1,10 @@
 (() => {
 
+    document.getElementById("jivo-chat-icon").addEventListener("click", function () {
+        if (document.documentElement.clientWidth < 1000) return
+        jivo_api.open();
+
+    });
 
     // ==================================Present============================
 
@@ -38,11 +43,11 @@
     // ==================================Бургер============================
     document.addEventListener('click', burgerInit)
     function burgerInit(e) {
-        
+
         const burgerIcon = e.target.closest('.burger__icon')
-        const burgerNavLink = e.target.closest('.header__nav-mobile')
+        const burgerNavLink = e.target.closest('.header__list-mobile')
         if (!burgerIcon && !burgerNavLink) return
-        
+
         if (document.documentElement.clientWidth > 1000) return
         if (!document.body.classList.contains('body--opened-menu')) {
             document.body.classList.add('body--opened-menu')
@@ -53,20 +58,50 @@
 
 
 
-    document.getElementById('toggleButton').addEventListener('click', function() {
+    document.getElementById('toggleButton').addEventListener('click', function () {
         let cursor = document.querySelector('.fixed-nav')
         let content = document.getElementById('content');
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
-            cursor.style.cursor = "pointer";
             document.body.classList.remove('body--opened-menu')
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
             document.body.classList.add('body--opened-menu')
-            cursor.style.cursor = "auto";
         }
     });
+
+
+    const sections = document.querySelectorAll('.section');
+    const fixedMenu = document.getElementById('fixedMenu');
     
+
+    sections.forEach((section, index) => {
+        section.setAttribute('data-index', index + 1);
+    });
+
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionTitle = section.getAttribute('data-title');
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                fixedMenu.style.display = 'block';
+                fixedMenu.textContent = `${sectionTitle} ${section.getAttribute('data-index')} / ${sections.length}`;
+            }
+
+            if (scrollPosition >= sectionTop + sectionHeight) {
+                fixedMenu.style.display = 'none';
+            }
+
+
+        });
+
+
+    });
 
     // ==================================Tabs============================
 
@@ -138,16 +173,16 @@
         if (!animations.classList.contains('interface__button-body--tablet') && e.target.closest('.interface__btn-tablet')) {
             animations.classList.remove('interface__button-body--pc')
             animations.classList.add('interface__button-body--tablet')
-            
-        } 
+
+        }
         if (!animations.classList.contains('interface__button-body--pc') && e.target.closest('.interface__btn-pc')) {
             animations.classList.remove('interface__button-body--tablet')
-            animations.classList.add('interface__button-body--pc')       
-        } 
+            animations.classList.add('interface__button-body--pc')
+        }
     }
 
     // =========================Маска для телефона==================================
-    
+
     const telInpust = document.querySelectorAll('input[type="tel"]');
     let im = new Inputmask('+ 7 (999) 999 99 99');
     im.mask(telInpust)

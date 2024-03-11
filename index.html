@@ -49,12 +49,16 @@
           </a>
         </div>
       </div>
-      <div id="toggleButton">
-        <a class="burger__icon" href="#" onclick="event.preventDefault()">
+      <div class="toggleButton">
+        <div class="chat-fixed-nav">
+          <img src="img/chat-pc.svg" alt="Jivo Chat" id="jivo-chat-icon">
+        </div>
+        <div class="fixed-menu" id="fixedMenu"></div>
+        <a id="toggleButton" class="burger__icon" href="#" onclick="event.preventDefault()">
           <span></span>
         </a>
       </div>
-      
+
     </div>
     <header class="header">
       <div class="container">
@@ -91,9 +95,16 @@
           <nav class="header__nav-mobile">
             <ul class="header__list-mobile">
               <li class="header__item-mobile">
-                <a class="header__link-mobile button" href="#">
-                  Вернуться в начало
-                </a>
+                <a href="#">Вернуться в начало</a>
+              </li>
+              <li class="header__item-mobile">
+                <a href="#about">О приборе</a>
+              </li>
+              <li class="header__item-mobile">
+                <a href="#program">Главные особенности</a>
+              </li>
+              <li class="header__item-mobile">
+                <a href="#interface">Визуализация интерфейса</a>
               </li>
               <li class="header__item">
                 <a class="header__link-mobile button__gradient" href="#contact">
@@ -107,7 +118,7 @@
     </header>
     <main class="main">
 
-      <section class="main__hero hero">
+      <section class="main__hero hero section" data-title="Приветствие">
         <div class="container">
           <div class="hero__inner">
             <div class="hero__content">
@@ -133,7 +144,7 @@
         </div>
       </section>
 
-      <section class="main__about about" id="about">
+      <section class="main__about about section" id="about" data-title="О приборе">
         <div class="container">
           <div class="about__inner">
             <h5 class="first-title" data-aos="fade-in" data-aos-duration="2000">О приборе</h5>
@@ -180,7 +191,7 @@
           </div>
       </section>
 
-      <section class="main__program program" id="program">
+      <section class="main__program program section" id="program" data-title="Главные особенности">
         <div class="container">
           <div class="program__inner">
             <h5 class="first-title" data-aos="fade-in" data-aos-duration="2000">Главные особенности</h5>
@@ -367,7 +378,7 @@
         </div>
       </section>
 
-      <section class="main__interface interface" id="interface">
+      <section class="main__interface interface section" id="interface" data-title="Визуализация интерфейса">
         <div class="container">
           <div class="interface__inner interface__button-body--tablet">
             <h5 class="first-title" data-aos="fade-in" data-aos-duration="2000">Главные особенности</h5>
@@ -406,7 +417,7 @@
         </div>
       </section>
 
-      <section class="main__text text">
+      <section class="main__text text section" data-title="Присоединяйтесь к нам">
         <div class="container">
           <div class="text__inner">
             <div class="text">
@@ -425,7 +436,7 @@
         </div>
       </section>
 
-      <section class="contact" id="contact">
+      <section class="contact section" id="contact" data-title="Связаться">
         <div class="container">
           <div class="contact__inner">
             <h5 class="first-title contact__first-title" data-aos="fade-in" data-aos-duration="2000">Форма для связи
