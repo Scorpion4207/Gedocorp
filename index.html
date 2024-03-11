@@ -23,7 +23,39 @@
     </div>
   </div>
   <div class="wrapper" id="website">
-    
+    <div class="fixed-nav">
+      <div id="content" class="fixed-nav__content">
+        <div class="logo-fixed">
+          <img src="img/logo-fixed.svg" alt="">
+        </div>
+        <ul class="fixed-nav-list">
+          <li class="fixed-nav-item">
+            <a class="fixed-nav-link" href="#about">О приборе</a>
+          </li>
+          <li class="fixed-nav-item">
+            <a class="fixed-nav-link" href="#program">Главные особенности</a>
+          </li>
+          <li class="fixed-nav-item">
+            <a class="fixed-nav-link" href="#interface">Визуализация интерфейса</a>
+          </li>
+        </ul>
+        <div class="fixed-nav-contacts">
+          <div class="fixed-nav-email" href="mailto:gedocorp@inbox.ru">
+            <span>Email:</span>
+            <a href="mailto:gedocorp@inbox.ru"> gedocorp@inbox.ru</a>
+          </div>
+          <a class="fixed-nav-contact" href="#contact">
+            Связаться
+          </a>
+        </div>
+      </div>
+      <div id="toggleButton">
+        <a class="burger__icon" href="#" onclick="event.preventDefault()">
+          <span></span>
+        </a>
+      </div>
+      
+    </div>
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -36,7 +68,7 @@
               </li>
               <li class="header__item">
                 <a class="chat" href="#">
-                  <img src="img/chat.svg" alt="Jivo Chat" id="jivo-chat" > 
+                  <img src="img/chat.svg" alt="Jivo Chat" id="jivo-chat">
                 </a>
               </li>
               <li class="header__item">
@@ -80,7 +112,8 @@
           <div class="hero__inner">
             <div class="hero__content">
               <div class="hero__text">
-                <p id="animation__hero-text"><span>Приветствуем Вас</span> в мире инновационных разработок в области промышленной
+                <p id="animation__hero-text"><span>Приветствуем Вас</span> в мире инновационных разработок в области
+                  промышленной
                   безопасности для анализа и мониторинга технического состояния трубопроводов, воплощающем в себе
                   передовые технологии искусственного интеллекта!</p>
               </div>
@@ -404,7 +437,7 @@
               <input type="text" placeholder="Ваше имя" class="contact__input" required>
               <input type="tel" placeholder="Телефон" class="contact__input" required>
               <input type="email" placeholder="Email" class="contact__input" required>
-              <textarea placeholder="Введите сообщение" class="contact__input" cols="30" rows="50"></textarea> 
+              <textarea placeholder="Введите сообщение" class="contact__input" cols="30" rows="50"></textarea>
               <label class="contact__check-label">
                 <input class="contact__checkbox" type="checkbox" required>
                 <span>Я даю согласие на обработку персональных данных</span>

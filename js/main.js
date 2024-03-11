@@ -51,6 +51,23 @@
         }
     }
 
+
+
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        let cursor = document.querySelector('.fixed-nav')
+        let content = document.getElementById('content');
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            cursor.style.cursor = "pointer";
+            document.body.classList.remove('body--opened-menu')
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            document.body.classList.add('body--opened-menu')
+            cursor.style.cursor = "auto";
+        }
+    });
+    
+
     // ==================================Tabs============================
 
     const accordionControls = document.querySelector('.program__accordions-body')

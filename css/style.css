@@ -356,6 +356,102 @@ html {
   border-radius: 20px;
 }
 
+.fixed-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 950px;
+  width: 100%;
+  background: #fff;
+  z-index: 5;
+  padding: 35px;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.fixed-nav__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fixed-nav-item {
+  font-weight: 400;
+  font-size: 24px;
+  padding-bottom: 15px;
+  margin-left: 35px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fixed-nav-item:hover {
+  color: #EC6608;
+}
+
+.fixed-nav-contacts {
+  background: linear-gradient(147deg, #2d6e58 0%, #005270 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 35px;
+  margin-left: 55px;
+}
+
+.fixed-nav-contacts span {
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+
+.fixed-nav-email {
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 43px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fixed-nav-email:hover {
+  color: var(--button-hover);
+}
+
+.fixed-nav-contact {
+  font-weight: 700;
+  font-size: 26px;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.fixed-nav-contact:hover {
+  color: var(--button-hover);
+}
+
+#content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease;
+}
+
 /*==============================HEADER====================================*/
 .header {
   background-color: var(--bg);
