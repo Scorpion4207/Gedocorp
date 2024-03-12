@@ -21,10 +21,6 @@
             setTimeout(function () {
                 wrapper.style.animation = 'none';
             }, 900);
-            // if (document.documentElement.clientWidth > 1000) return
-            // presentationScreen.style.inset = 'none';
-            // presentationScreen.style.height = '50%';
-            // presentationScreen.style.width = '50%';
             if (document.documentElement.clientWidth > 500) return
             presentationScreen.style.inset = 'none';
             presentationScreen.style.height = '80%';
@@ -59,9 +55,9 @@
 
 
     document.getElementById('toggleButton').addEventListener('click', function () {
-        let cursor = document.querySelector('.fixed-nav')
+
         let content = document.getElementById('content');
-        if (content.style.maxHeight) {
+        if (content.style.maxHeight ) {
             content.style.maxHeight = null;
             document.body.classList.remove('body--opened-menu')
         } else {
@@ -69,10 +65,30 @@
             document.body.classList.add('body--opened-menu')
         }
     });
+    
 
+    const closestFixedMenu = document.querySelector('.fixed-nav__content')
+
+    closestFixedMenu.addEventListener('click', closestFixed)
+
+    function closestFixed(e) {
+        const fixedOpenMenu = e.target.closest('.fixed-nav__content')
+        if (!fixedOpenMenu) return
+
+        let content = document.getElementById('content');
+
+        if (content.style.maxHeight && e.target.closest('.fixed-nav__content')) {
+             content.style.maxHeight = null;
+            document.body.classList.remove('body--opened-menu')
+        }
+
+    }
+
+    
 
     const sections = document.querySelectorAll('.section');
     const fixedMenu = document.getElementById('fixedMenu');
+    const fixedMenuName = document.getElementById('fixedMenuName');
     
 
     sections.forEach((section, index) => {
@@ -89,8 +105,12 @@
             const sectionTitle = section.getAttribute('data-title');
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+
+                fixedMenuName.style.display = 'block';
+                fixedMenuName.textContent = `${sectionTitle}`
+
                 fixedMenu.style.display = 'block';
-                fixedMenu.textContent = `${sectionTitle} ${section.getAttribute('data-index')} / ${sections.length}`;
+                fixedMenu.textContent = ` ${section.getAttribute('data-index')} / ${sections.length}`;
             }
 
             if (scrollPosition >= sectionTop + sectionHeight) {

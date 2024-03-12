@@ -25,35 +25,40 @@
   <div class="wrapper" id="website">
     <div class="fixed-nav">
       <div id="content" class="fixed-nav__content">
-        <div class="logo-fixed">
-          <img src="img/logo-fixed.svg" alt="">
-        </div>
-        <ul class="fixed-nav-list">
-          <li class="fixed-nav-item">
-            <a class="fixed-nav-link" href="#about">О приборе</a>
-          </li>
-          <li class="fixed-nav-item">
-            <a class="fixed-nav-link" href="#program">Главные особенности</a>
-          </li>
-          <li class="fixed-nav-item">
-            <a class="fixed-nav-link" href="#interface">Визуализация интерфейса</a>
-          </li>
-        </ul>
-        <div class="fixed-nav-contacts">
-          <div class="fixed-nav-email" href="mailto:gedocorp@inbox.ru">
-            <span>Email:</span>
-            <a href="mailto:gedocorp@inbox.ru"> gedocorp@inbox.ru</a>
+        <div class="fixed-nav__content-body">
+          <div class="logo-fixed">
+            <img src="img/logo-fixed.svg" alt="">
           </div>
-          <a class="fixed-nav-contact" href="#contact">
-            Связаться
-          </a>
+          <ul class="fixed-nav-list">
+            <li class="fixed-nav-item">
+              <a class="fixed-nav-link" href="#about">О приборе</a>
+            </li>
+            <li class="fixed-nav-item">
+              <a class="fixed-nav-link" href="#program">Главные особенности</a>
+            </li>
+            <li class="fixed-nav-item">
+              <a class="fixed-nav-link" href="#interface">Визуализация интерфейса</a>
+            </li>
+          </ul>
+          <div class="fixed-nav-contacts">
+            <div class="fixed-nav-email" href="mailto:gedocorp@inbox.ru">
+              <span>Email:</span>
+              <a href="mailto:gedocorp@inbox.ru"> gedocorp@inbox.ru</a>
+            </div>
+            <a class="fixed-nav-contact" href="#contact">
+              Связаться
+            </a>
+          </div>
         </div>
       </div>
       <div class="toggleButton">
         <div class="chat-fixed-nav">
           <img src="img/chat-pc.svg" alt="Jivo Chat" id="jivo-chat-icon">
         </div>
-        <div class="fixed-menu" id="fixedMenu"></div>
+        <div class="fixed-menu-wrapper">
+          <div class="fixed-menu--name" id="fixedMenuName"></div>
+          <div class="fixed-menu" id="fixedMenu"></div>
+        </div>
         <a id="toggleButton" class="burger__icon" href="#" onclick="event.preventDefault()">
           <span></span>
         </a>

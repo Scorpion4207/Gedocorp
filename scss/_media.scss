@@ -292,7 +292,37 @@
     margin-top: auto;
   }
 
-
+  .body--opened-menu .burger__icon span {
+    background: transparent;
+  }
+  
+  .body--opened-menu .burger__icon:hover span::after {
+    background: var(--blue);
+  }
+  
+  .body--opened-menu .burger__icon:hover span::before {
+    background: var(--blue);
+  }
+  
+  
+  .body--opened-menu .burger__icon:active span::before {
+    background: #1b9dd0;
+  }
+  
+  .body--opened-menu .burger__icon:active span::after {
+    background: #1b9dd0;
+  }
+  
+  
+  .body--opened-menu .burger__icon span::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  
+  .body--opened-menu .burger__icon span::after {
+    transform: rotate(45deg);
+    bottom: 0;
+  }
   /*======================HEADER===========================*/
   .header {
 
