@@ -489,7 +489,7 @@ html {
 
 .chat-fixed-nav {
   background: linear-gradient(159deg, #39b9ec 0%, #063 100%);
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 26px;
   z-index: 7;
   -webkit-transition: all 0.7s;
@@ -511,7 +511,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 340px 0 20px;
+  margin: 0 330px 0 20px;
   gap: 15px;
   min-width: 400px;
   -webkit-transition: all 0.7s;

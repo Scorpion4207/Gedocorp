@@ -229,7 +229,6 @@ html {
 }
 
 .fixed-nav-item {
- 
   font-weight: 400;
   font-size: 24px;
   padding-bottom: 15px;
@@ -318,7 +317,7 @@ html {
 
 .chat-fixed-nav {
   background: linear-gradient(159deg, #39b9ec 0%, #063 100%);
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 26px;
   z-index: 7;
   transition: all .7s;
@@ -333,7 +332,7 @@ html {
 .fixed-menu-wrapper {
   display: flex;
   align-items: center;
-  margin: 0 340px 0 20px;
+  margin: 0 330px 0 20px;
   gap: 15px;
   min-width: 400px;
   transition: all .7s;
