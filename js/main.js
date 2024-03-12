@@ -41,7 +41,7 @@
     function burgerInit(e) {
 
         const burgerIcon = e.target.closest('.burger__icon')
-        const burgerNavLink = e.target.closest('.header__list-mobile')
+        const burgerNavLink = e.target.closest('.header__nav-mobile')
         if (!burgerIcon && !burgerNavLink) return
 
         if (document.documentElement.clientWidth > 1000) return
@@ -67,22 +67,24 @@
     });
     
 
-    const closestFixedMenu = document.querySelector('.fixed-nav__content')
+    
 
-    closestFixedMenu.addEventListener('click', closestFixed)
+    document.addEventListener('click', closestFixed)
 
     function closestFixed(e) {
         const fixedOpenMenu = e.target.closest('.fixed-nav__content')
-        if (!fixedOpenMenu) return
+        const fixedCloseMenu = e.target.closest('.main')
+        if (!fixedOpenMenu && !fixedCloseMenu) return
 
         let content = document.getElementById('content');
 
-        if (content.style.maxHeight && e.target.closest('.fixed-nav__content')) {
+        if (content.style.maxHeight && e.target.closest('.fixed-nav__content') || e.target.closest('.main')) {
              content.style.maxHeight = null;
             document.body.classList.remove('body--opened-menu')
         }
 
     }
+    
 
     
 

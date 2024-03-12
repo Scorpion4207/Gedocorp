@@ -311,13 +311,13 @@ html {
 #content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height .7s ease;
 
 }
 
 .chat-fixed-nav {
-  background: linear-gradient(159deg, #39b9ec 0%, #063 100%);
-  padding: 10px 20px;
+  background: linear-gradient(109deg, #39b9ec 0%, #063 100%);
+  padding: 13px 19px;
   border-radius: 26px;
   z-index: 7;
   transition: all .7s;
@@ -332,14 +332,14 @@ html {
 .fixed-menu-wrapper {
   display: flex;
   align-items: center;
-  margin: 0 330px 0 20px;
+  margin: 0 320px 0 20px;
   gap: 15px;
   min-width: 400px;
   transition: all .7s;
 }
 
 .fixed-menu--name {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 24px;
   color: var(--black);
 }
@@ -401,7 +401,7 @@ html {
     font-size: 24px;
     line-height: 142%;
     color: #fff;
-    z-index: 5;
+
   }
 
   &__item:nth-child(2) {
@@ -558,7 +558,7 @@ html {
   &__icon {
     display: flex;
     height: 40px;
-    width: 40px;
+    width: 42px;
     background-color: #fff;
     border-radius: 10px;
     align-items: center;
@@ -571,9 +571,9 @@ html {
   &__icon span::before,
   &__icon span::after {
     content: '';
-    border-radius: 60px;
-    width: 26px;
-    height: 2px;
+    border-radius: 100px;
+    width: 42px;
+    height: 4px;
     background-color: var(--bg);
     transition: all .3s;
   }
@@ -585,12 +585,12 @@ html {
 
   &__icon span::before {
     position: absolute;
-    top: 8px;
+    top: 11px;
   }
 
   &__icon span::after {
     position: absolute;
-    bottom: 8px;
+    bottom: 11px;
   }
 }
 
@@ -626,32 +626,7 @@ html {
   display: none;
 }
 
-.header__list-mobile {
-  background: linear-gradient(147deg, #2d6e58 0%, #005270 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 15%;
-  left: 5%;
-  right: 5%;
-  font-weight: 400;
-  font-size: 24px;
-  color: #fff;
-  border-radius: 35px;
-  padding: 50px;
-  gap: 50px;
-}
 
-.header__item-mobile {
-  transition: all .3s;
-  text-align: center;
-}
-
-.header__item-mobile:hover {
-  color: var(--button-hover);
-}
 
 /*=========================HERO===========================*/
 
