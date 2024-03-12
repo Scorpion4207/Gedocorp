@@ -234,7 +234,7 @@
 
 
   .accordion-list__item--opened.accordion-list__item {
-    padding: 20px;
+    padding: 20px 20px 10px;
   }
 
 
@@ -1101,6 +1101,7 @@
   /*======================FOOTER===========================*/
   .footer {
     margin: 0 20px 30px;
+    border-radius: 41px;
 
     &__inner {
       grid-template-columns: 1fr;
@@ -1302,7 +1303,7 @@
 
   .accordion-list__item--opened.accordion-list__item {
     border-radius: 40px;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
   }
 
 
@@ -1421,14 +1422,18 @@
     gap: 10px;
   }
 
-  .text {
-    font-size: 14px;
-
-    &__inner {
-      margin-bottom: 100px;
-    }
+  .text-pc {
+    display: none;
   }
 
+  .text__inner {
+    margin-bottom: 100px;
+}
+
+.text-mobile {
+  display: block;
+}
+  
 
   /*=========================CONTACT===========================*/
 
@@ -1614,10 +1619,7 @@
       padding: 0 10px;
     }
 
-    &__text {
-      font-size: 12px;
-    }
-
+   
     &__team-text {
       font-size: 14px;
     }
@@ -1632,7 +1634,6 @@
   }
 
   .accordion-content {
-    font-size: 14px;
     margin-left: 40px;
   }
 
@@ -1644,4 +1645,11 @@
   .interface__viewing-fon {
     max-height: 350px;
   }
+}
+
+@media (max-width: 370px) {
+  .text-mobile {
+    font-size: 18px;
+
+}
 }

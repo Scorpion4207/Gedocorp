@@ -653,10 +653,7 @@ html {
     margin-bottom: 35px;
   }
 
-  &__text span {
-    font-weight: 600;
 
-  }
 
   &__team {
     display: flex;
@@ -945,6 +942,7 @@ html {
   color: rgba(255, 255, 255, 0.8);
   margin-top: 15px;
   margin-left: 58px;
+  padding-bottom: 20px;
 }
 
 .accordion-list__content {
@@ -962,7 +960,7 @@ html {
 .accordion-list__item--opened.accordion-list__item {
   border-radius: 58px;
   background: linear-gradient(180deg, rgba(232, 255, 233, 0.16) 0%, rgba(57, 185, 236, 0.16) 100%);
-  padding: 35px;
+  padding: 35px 35px 15px 35px;
   transition: all .7s;
 }
 
@@ -1215,6 +1213,21 @@ html {
     padding-bottom: 200px;
   }
 }
+
+.text-pc {
+  overflow: hidden;
+}
+
+.text-mobile{
+  display: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.33;
+  color: #fff;
+  overflow: hidden;
+}
+
+
 
 /*=========================CONTACT===========================*/
 

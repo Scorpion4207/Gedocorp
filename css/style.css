@@ -849,9 +849,6 @@ html {
   overflow: hidden;
   margin-bottom: 35px;
 }
-.hero__text span {
-  font-weight: 600;
-}
 .hero__team {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1144,6 +1141,7 @@ html {
   color: rgba(255, 255, 255, 0.8);
   margin-top: 15px;
   margin-left: 58px;
+  padding-bottom: 20px;
 }
 
 .accordion-list__content {
@@ -1164,7 +1162,7 @@ html {
   border-radius: 58px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(232, 255, 233, 0.16)), to(rgba(57, 185, 236, 0.16)));
   background: linear-gradient(180deg, rgba(232, 255, 233, 0.16) 0%, rgba(57, 185, 236, 0.16) 100%);
-  padding: 35px;
+  padding: 35px 35px 15px 35px;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
@@ -1465,6 +1463,19 @@ html {
           flex-direction: column;
   text-align: center;
   padding-bottom: 200px;
+}
+
+.text-pc {
+  overflow: hidden;
+}
+
+.text-mobile {
+  display: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.33;
+  color: #fff;
+  overflow: hidden;
 }
 
 /*=========================CONTACT===========================*/
@@ -1950,7 +1961,7 @@ html {
     font-size: 18px;
   }
   .accordion-list__item--opened.accordion-list__item {
-    padding: 20px;
+    padding: 20px 20px 10px;
   }
   .text {
     font-size: 30px;
@@ -2772,6 +2783,7 @@ html {
   /*======================FOOTER===========================*/
   .footer {
     margin: 0 20px 30px;
+    border-radius: 41px;
   }
   .footer__inner {
     grid-template-columns: 1fr;
@@ -2971,7 +2983,7 @@ html {
   }
   .accordion-list__item--opened.accordion-list__item {
     border-radius: 40px;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
   }
   /*=========================interface===========================*/
   .interface__viewing-fon {
@@ -3080,11 +3092,14 @@ html {
   .interface__button-body {
     gap: 10px;
   }
-  .text {
-    font-size: 14px;
+  .text-pc {
+    display: none;
   }
   .text__inner {
     margin-bottom: 100px;
+  }
+  .text-mobile {
+    display: block;
   }
   /*=========================CONTACT===========================*/
   .contact__inner {
@@ -3249,9 +3264,6 @@ html {
   .hero__inner {
     padding: 0 10px;
   }
-  .hero__text {
-    font-size: 12px;
-  }
   .hero__team-text {
     font-size: 14px;
   }
@@ -3260,11 +3272,15 @@ html {
     margin-bottom: 200px;
   }
   .accordion-content {
-    font-size: 14px;
     margin-left: 40px;
   }
   /*=========================interface===========================*/
   .interface__viewing-fon {
     max-height: 350px;
+  }
+}
+@media (max-width: 370px) {
+  .text-mobile {
+    font-size: 18px;
   }
 }
