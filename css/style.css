@@ -2881,6 +2881,7 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 10px;
+    margin: 20px auto;
   }
   .fixed-nav-contacts {
     padding: 20px;
