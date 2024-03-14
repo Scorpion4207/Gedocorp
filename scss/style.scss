@@ -23,7 +23,6 @@ html {
 
 .presentation {
   &__screen {
-    width: 100%;
     overflow: hidden;
     position: fixed;
     inset: 0;
@@ -153,7 +152,6 @@ html {
   background-color: #071926;
   background-image: url(../img/pattern.png);
   z-index: 1;
-
 }
 
 .wrapper__hidden {

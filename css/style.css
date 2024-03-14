@@ -123,7 +123,6 @@ html {
 
 /*======================Presentation Screen===========================*/
 .presentation__screen {
-  width: 100%;
   overflow: hidden;
   position: fixed;
   inset: 0;
