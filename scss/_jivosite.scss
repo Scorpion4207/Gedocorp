@@ -1,0 +1,117 @@
+/* hide the original widget - that there were no two labels on the screen*/
+#jivo_chat_widget{
+	display: none;
+}
+
+/* the default style - for offline messages if no one is online */
+#jivo_custom_widget{
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	width: 100px;
+	z-index: 5;
+	height: 40px;
+	cursor: pointer;
+	height: 100px;
+	border-radius: 30px;
+	background: linear-gradient(136deg, #39b9ec 0%, #063 100%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s;
+}
+
+
+#jivo_custom_widget::before{
+	content: '';
+	position: absolute;
+	inset: 0;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/chat-pc.svg);
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 20px;
+}
+
+/* when you hover the label should be shifted to the right by 3px */
+
+
+/* if there are operators online - show other label*/
+#jivo_custom_widget.jivo_online{
+	height: 100px;
+	width: 100px;
+	background: linear-gradient(136deg, #39b9ec 0%, #063 100%);
+	border-radius: 30px;
+
+}
+
+@media (max-width: 1000px) {
+	#jivo_custom_widget{
+		position: fixed;
+		top: 20px;
+		left: 15px;
+		height: 40px;
+		width: 40px;
+		z-index: 7;
+		height: 40px;
+		cursor: pointer;
+		border-radius: 10px;
+		opacity: 1;
+	visibility: visible;
+	}
+
+	#jivo_custom_widget::before{
+		content: '';
+		position: absolute;
+		inset: 0;
+		height: 40px;
+		width: 40px;
+		background-image: url(../img/chat.svg);
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		border-radius: 10px;
+	
+	}
+	
+	/* when you hover the label should be shifted to the right by 3px */
+	
+	
+	/* if there are operators online - show other label*/
+	#jivo_custom_widget.jivo_online{
+		height: 40px;
+		width: 40px;
+		background: linear-gradient(136deg, #39b9ec 0%, #063 100%);
+		border-radius: 10px;
+	
+	}
+}
+
+@media (max-width: 450px) {
+	#jivo_custom_widget{
+		position: fixed;
+		top: 20px;
+		left: 15px;
+		height: 40px;
+		width: 40px;
+		z-index: 7;
+		height: 40px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+
+	#jivo_custom_widget::before{
+		content: '';
+		position: absolute;
+		inset: 0;
+		height: 40px;
+		width: 40px;
+		background-image: url(../img/chat.svg);
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		border-radius: 10px;
+	
+	}
+}
