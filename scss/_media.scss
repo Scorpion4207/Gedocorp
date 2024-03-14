@@ -1198,6 +1198,16 @@
   }
 
 
+
+  @keyframes sait {
+    0% {
+      transform: translateY(80%);
+    }
+  
+    100% {
+      transform: none;
+    }
+  }
   /*======================header__list-mobile===========================*/
 
   .header__list-mobile {
